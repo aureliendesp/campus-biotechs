@@ -1,0 +1,1074 @@
+{
+  "food": {
+    "name": "Alimentation & fermentation",
+    "subtitle": "Le vivant transforme aussi ce que nous mangeons.",
+    "tag": "ALIMENTATION",
+    "color": "#79f3ad",
+    "icon": "◌",
+    "rooms": [
+      {
+        "name": "Le pôle alimentation & fermentation",
+        "asset": "food_exterior",
+        "subtitle": "Des fermentations traditionnelles aux ingrédients produits avec précision.",
+        "points": [
+          {
+            "title": "Des microorganismes pour fabriquer nos aliments, vraiment ?",
+            "body": "Oui, et depuis longtemps : les levures et les bactéries participent à la fabrication du pain, des yaourts et de certains fromages. Aujourd’hui, des microorganismes sélectionnés ou parfois modifiés peuvent aussi produire des protéines, des enzymes ou des arômes précis. On les cultive dans des conditions contrôlées, puis on récupère et purifie l’ingrédient recherché. Ainsi, des protéines identiques à certaines protéines du lait peuvent être produites sans élevage de vaches ; il faut ensuite les formuler avec d’autres ingrédients pour obtenir un produit alimentaire.",
+            "term": "Fermentation de précision",
+            "definition": "Culture de microorganismes pour fabriquer une substance ciblée.",
+            "source": "Commission européenne · Novel Food ; fermentation de précision",
+            "x": 52,
+            "y": 45
+          }
+        ]
+      },
+      {
+        "name": "Bienvenue au Food Lab",
+        "asset": "food_hall",
+        "subtitle": "Explorer les biotechnologies alimentaires, des microorganismes aux nouveaux ingrédients.",
+        "points": [
+          {
+            "title": "Et si nos protéines venaient des micro-organismes ?",
+            "body": "Des levures, des bactéries, des champignons filamenteux et certaines microalgues peuvent être cultivés pour produire une biomasse riche en protéines, utilisée comme ingrédient. Selon le produit, les microorganismes sont ensuite inactivés ou séparés ; il ne faut pas supposer qu’ils sont toujours consommés vivants. Comme pour tout nouvel ingrédient, l’espèce utilisée, le procédé, la composition et la sécurité alimentaire doivent être évalués.",
+            "term": "Protéines microbiennes",
+            "definition": "Protéines obtenues à partir de microorganismes ou de leur biomasse.",
+            "source": "FAO · protéines alternatives ; Commission européenne · Novel Food",
+            "x": 23,
+            "y": 33
+          },
+          {
+            "title": "Et si demain, on cultivait de la viande en laboratoire ?",
+            "body": "Des équipes apprennent à multiplier des cellules animales dans des cuves pour obtenir des tissus destinés à l’alimentation, sans élever un animal entier. La viande cultivée est une technologie réelle, mais sa production à grande échelle reste un défi : il faut maîtriser les milieux de culture, la texture, les coûts, la sécurité et les impacts environnementaux. Les autorisations de mise sur le marché dépendent des règles de chaque pays.",
+            "term": "Viande cultivée",
+            "definition": "Tissu issu de cellules animales cultivées dans des conditions contrôlées.",
+            "source": "FAO · food safety aspects of cell-based food",
+            "x": 76,
+            "y": 33
+          },
+          {
+            "title": "Et si nos déchets alimentaires devenaient de nouveaux ingrédients ?",
+            "body": "Des résidus agricoles ou agroalimentaires peuvent contenir des nutriments, des molécules utiles ou des sucres qui servent de substrats à une fermentation. Des enzymes et des microorganismes peuvent aider à les transformer en ingrédients. Mais un résidu n’est pas automatiquement apte à devenir un aliment : sa composition, les contaminants possibles, la traçabilité et les règles de sécurité doivent être vérifiés.",
+            "term": "Valorisation",
+            "definition": "Transformation d’un résidu en ressource utile, sous réserve de sa qualité.",
+            "source": "INRAE · valorisation des coproduits",
+            "x": 23,
+            "y": 70
+          },
+          {
+            "title": "Et si tu nourrissais aussi des milliards de bactéries en mangeant ?",
+            "body": "Notre intestin abrite une communauté très diverse de microorganismes. La composition de nos repas peut influencer les espèces présentes et leurs activités ; en retour, ces interactions participent au fonctionnement de l’organisme. Les scientifiques étudient comment les fibres et d’autres composants alimentaires agissent sur le microbiote. Les effets varient selon les personnes : on ne peut pas résumer la santé à une seule bactérie ou à un aliment miracle.",
+            "term": "Microbiote intestinal",
+            "definition": "Ensemble des microorganismes vivant dans l’intestin et de leurs interactions.",
+            "source": "INRAE · microbiote intestinal",
+            "x": 76,
+            "y": 70
+          }
+        ]
+      }
+    ]
+  },
+  "environment": {
+    "name": "Eau & environnement",
+    "subtitle": "Des microorganismes pour mieux gérer l’eau, les sols et les ressources.",
+    "tag": "ENVIRONNEMENT",
+    "color": "#8cf2be",
+    "icon": "≈",
+    "rooms": [
+      {
+        "name": "Le pôle eau & environnement",
+        "asset": "environment_exterior",
+        "subtitle": "L’eau claire peut encore contenir des substances invisibles.",
+        "points": [
+          {
+            "title": "Le vivant peut-il nous aider à protéger l’environnement ?",
+            "body": "Bactéries, champignons, plantes, microalgues ou enzymes : leurs capacités peuvent être utilisées pour répondre à certains problèmes environnementaux. Elles peuvent aider à surveiller un milieu, transformer certains polluants, traiter des eaux usées ou valoriser des déchets organiques. Ces solutions dépendent des organismes et des conditions du milieu : elles ne conviennent pas à tous les polluants et doivent être évaluées au cas par cas.",
+            "term": "Biotechnologies environnementales",
+            "definition": "Utilisation d’organismes vivants ou de leurs composants pour surveiller, prévenir ou réduire certains impacts sur l’environnement.",
+            "x": 52,
+            "y": 45
+          }
+        ]
+      },
+      {
+        "name": "Le hall du traitement biologique",
+        "asset": "environment_hall",
+        "subtitle": "Des microorganismes transforment certaines matières organiques et certains polluants.",
+        "points": [
+          {
+            "title": "Et si des microbes nettoyaient nos eaux usées ?",
+            "body": "Figure-toi que c’est déjà le cas ! Dans les stations de traitement des eaux usées, des bactéries et d’autres microorganismes dégradent une partie des matières organiques. Ils transforment certaines substances en composés plus simples. D’autres étapes retirent les déchets solides et séparent les boues formées pendant le traitement. L’eau traitée est plus propre, mais elle n’est pas automatiquement potable.",
+            "term": "Traitement biologique",
+            "definition": "Étape où des microorganismes dégradent une partie des polluants des eaux usées.",
+            "source": "Eaufrance · traitement des eaux usées",
+            "x": 32,
+            "y": 42
+          },
+          {
+            "title": "Des microorganismes pour dépolluer les sols, vraiment ?",
+            "body": "Oui, certains microorganismes du sol peuvent transformer des polluants. Des bactéries ou des champignons utilisent parfois des substances comme certains hydrocarbures comme source de matière ou d’énergie : ils les dégradent alors en composés plus simples. On peut favoriser l’activité des microorganismes déjà présents dans le sol ou, dans certains cas, en ajouter après les avoir sélectionnés. Mais cette méthode ne fonctionne pas pour tous les polluants. Les métaux, par exemple, ne peuvent pas être détruits par des microorganismes. L’efficacité dépend aussi du sol et des conditions de vie des microbes ; le traitement peut donc être lent et doit être suivi.",
+            "term": "Bioremédiation",
+            "definition": "Utilisation de microorganismes pour transformer ou maîtriser certains polluants dans un milieu contaminé.",
+            "source": "BRGM · dépollution des sols ; INRAE · microorganismes du sol",
+            "x": 70,
+            "y": 58
+          }
+        ]
+      },
+      {
+        "name": "La bioraffinerie environnementale",
+        "asset": "environment_explore",
+        "subtitle": "Traiter des résidus organiques et récupérer énergie ou autres ressources.",
+        "points": [
+          {
+            "title": "Et si nos déchets devenaient du carburant ?",
+            "body": "Certains déchets organiques — restes alimentaires, résidus agricoles ou boues d’épuration — peuvent être transformés par des microorganismes en biogaz, notamment par digestion sans oxygène. Le biogaz contient du méthane : il peut produire de la chaleur ou de l’électricité et, après épuration, devenir du biométhane. Ce procédé ne convient pas à tous les déchets et doit être maîtrisé. Quand un système traite des résidus tout en récupérant plusieurs ressources — énergie, nutriments ou molécules d’intérêt — on peut parler de bioraffinerie environnementale.",
+            "term": "Bioraffinerie environnementale",
+            "definition": "Organisation de procédés qui traite des résidus et cherche à récupérer plusieurs ressources tout en maîtrisant les impacts.",
+            "source": "INRAE · bioraffinerie environnementale",
+            "x": 50,
+            "y": 48
+          }
+        ]
+      }
+    ]
+  },
+  "plant": {
+    "name": "Biotechnologies végétales & agriculture",
+    "subtitle": "Des plantes, des gènes et de passionnantes alliances souterraines.",
+    "tag": "VÉGÉTAL",
+    "color": "#a4f39d",
+    "icon": "✿",
+    "rooms": [
+      {
+        "name": "Des biotechnologies végétales",
+        "asset": "plant_exterior",
+        "subtitle": "Améliorer les plantes et comprendre leurs interactions avec les microorganismes.",
+        "points": [
+          {
+            "title": "Peut-on « fabriquer » des plantes plus résistantes ?",
+            "body": "Depuis longtemps, les agriculteurs et les scientifiques sélectionnent puis croisent des plantes qui possèdent des caractères intéressants. Les outils de biotechnologie aident à repérer plus précisément certaines caractéristiques, comme la résistance à une maladie ou la tolérance au manque d’eau. Les nouvelles techniques génomiques (NGT) peuvent modifier de façon ciblée certaines séquences de l’ADN. Elles peuvent accélérer la création de variétés, mais ne garantissent ni une meilleure résistance dans tous les milieux ni un rendement supérieur : les caractères doivent être testés au champ, et leur encadrement dépend de la réglementation en vigueur.",
+            "term": "NGT",
+            "definition": "Nouvelles techniques permettant de modifier ou d’utiliser de façon ciblée la variation génétique des plantes.",
+            "source": "Commission européenne · New genomic techniques",
+            "x": 50,
+            "y": 48
+          }
+        ]
+      },
+      {
+        "name": "La serre expérimentale",
+        "asset": "plant_explore",
+        "subtitle": "Observer les interactions plante-microorganismes et tester des solutions de protection des cultures.",
+        "points": [
+          {
+            "title": "Sous nos pieds, les plantes ont-elles des alliés secrets ?",
+            "body": "Oui : les racines vivent au contact de nombreux microorganismes. Certains champignons forment une mycorhize : leurs filaments explorent le sol et peuvent aider la plante à accéder à l’eau et aux éléments minéraux. En échange, la plante leur fournit des sucres produits par photosynthèse. Chez les légumineuses, comme les pois ou les haricots, certaines bactéries vivent dans des nodosités des racines et rendent l’azote de l’air utilisable par la plante. Ces alliances intéressent les agronomes, mais leur effet dépend de la plante, du sol et des conditions de culture.",
+            "term": "Mycorrhize",
+            "definition": "Association entre les racines d’une plante et certains champignons du sol.",
+            "source": "INRAE · mycorhizes et symbioses végétales",
+            "x": 50,
+            "y": 48
+          },
+          {
+            "title": "Des éléments biologiques pour protéger les récoltes ?",
+            "body": "Certains microorganismes utiles peuvent freiner des agents responsables de maladies en leur faisant concurrence ou en produisant des substances qui limitent leur développement. D’autres ciblent certains insectes ravageurs. Des biomolécules, notamment de petites protéines, peuvent aussi contribuer à protéger les plantes. Ces solutions de biocontrôle complètent les autres méthodes de protection et peuvent parfois remplacer un moyen précis lorsqu’elles sont efficaces. Leur résultat dépend du ravageur, de la culture et des conditions du champ : elles ne remplacent pas universellement les produits phytosanitaires.",
+            "term": "Biocontrôle",
+            "definition": "Méthodes mobilisant des organismes ou substances naturels pour protéger les cultures.",
+            "source": "Commission européenne · Integrated pest management",
+            "x": 50,
+            "y": 48
+          }
+        ]
+      }
+    ]
+  },
+  "health": {
+    "name": "Santé & Bioproduction",
+    "subtitle": "Des cellules vivantes deviennent parfois des traitements.",
+    "tag": "SANTÉ",
+    "color": "#cbb0ff",
+    "icon": "✚",
+    "rooms": [
+      {
+        "name": "Des biotechnologies pour la santé",
+        "asset": "health_exterior",
+        "subtitle": "Des médicaments biologiques variés, évalués selon leur nature et leur procédé.",
+        "points": [
+          {
+            "title": "Un médicament fabriqué par le vivant, ça existe ?",
+            "body": "Oui. Certains médicaments sont des biomédicaments, fabriqués grâce à des cellules ou des microorganismes. Des bactéries, des levures ou des cellules animales peuvent produire une protéine thérapeutique ou un anticorps. La molécule est ensuite récupérée et purifiée pour entrer dans la composition du médicament. Beaucoup d’autres médicaments restent fabriqués par synthèse chimique. Les biomédicaments sont souvent des molécules complexes, dont la production demande un contrôle précis.",
+            "term": "Biomédicament",
+            "definition": "Médicament dont la substance active est produite à partir d’une source biologique ou par un procédé biologique.",
+            "source": "EMA · biological medicines",
+            "x": 24,
+            "y": 39
+          },
+          {
+            "title": "De nombreux biomédicaments",
+            "body": "Les biomédicaments regroupent des produits différents : anticorps, protéines thérapeutiques, certains vaccins, ainsi que des thérapies cellulaires ou géniques. Ils mobilisent les sciences du vivant, mais ne sont pas tous fabriqués de la même façon : certains contiennent une molécule produite par des cellules, tandis que d’autres reposent sur des cellules ou du matériel génétique comme élément thérapeutique. Le procédé dépend donc du médicament.",
+            "term": "Thérapie génique",
+            "definition": "Approche thérapeutique qui apporte, modifie ou régule une information génétique dans des cellules.",
+            "source": "EMA · biological medicines",
+            "x": 50,
+            "y": 62
+          },
+          {
+            "title": "Un biosimilaire, c’est quoi ?",
+            "body": "Un biosimilaire est un médicament biologique hautement similaire à un biomédicament déjà autorisé, appelé médicament de référence. En raison de la complexité des molécules biologiques et de leur fabrication, il n’est pas nécessairement strictement identique comme peut l’être la substance active d’un médicament générique chimique. Les études doivent montrer qu’il n’existe pas de différence cliniquement significative en qualité, sécurité et efficacité.",
+            "term": "Biosimilaire",
+            "definition": "Médicament biologique hautement similaire à un médicament biologique de référence.",
+            "source": "EMA · biosimilar medicines",
+            "x": 78,
+            "y": 44
+          }
+        ]
+      },
+      {
+        "name": "Le hall de bioproduction",
+        "asset": "health_hall",
+        "subtitle": "De la culture des cellules aux contrôles et outils de diagnostic.",
+        "points": [
+          {
+            "title": "Peut-on apprendre à une cellule à fabriquer un médicament ?",
+            "body": "On ne lui apprend pas comme à un élève : on lui fournit une instruction biologique. Pour produire certaines protéines thérapeutiques, les scientifiques introduisent dans une cellule une information génétique qui indique quelle protéine fabriquer. La cellule utilise alors sa propre machinerie. Les équipes sélectionnent et cultivent les cellules qui produisent la molécule attendue. Dans ce cas, elles servent d’usine : elles fabriquent le médicament, mais ne sont pas elles-mêmes le traitement.",
+            "term": "Cellule productrice",
+            "definition": "Cellule cultivée pour fabriquer une molécule thérapeutique.",
+            "source": "EMA · biological medicines",
+            "x": 32,
+            "y": 42
+          },
+          {
+            "title": "De la cellule au médicament : comment ça marche ?",
+            "body": "Tout commence par une cellule productrice sélectionnée et conservée. Elle est multipliée dans de petits récipients, puis cultivée dans des bioréacteurs de plus en plus grands. Les équipes contrôlent notamment la température, l’oxygène et les nutriments. Elles récoltent ensuite le milieu de culture et séparent la molécule des cellules et des autres substances. Plusieurs étapes de purification permettent d’obtenir le produit attendu ; il est ensuite formulé, conditionné et contrôlé.",
+            "term": "Purification",
+            "definition": "Étapes qui séparent la molécule recherchée des cellules et autres substances du procédé.",
+            "source": "EMA · biologics manufacturing",
+            "x": 70,
+            "y": 60
+          },
+          {
+            "title": "Pourquoi vérifie-t-on un médicament encore et encore ?",
+            "body": "À chaque étape, les équipes vérifient que le médicament possède les caractéristiques attendues. Certains contrôles portent sur l’identité de la molécule, d’autres sur sa quantité, sa pureté ou sa capacité à agir ; on recherche aussi des contaminations et on surveille le procédé. Les médicaments biologiques peuvent présenter de petites variations inhérentes aux systèmes vivants. Les contrôles et les limites définies permettent de démontrer que chaque lot reste conforme et de qualité constante avant sa libération.",
+            "term": "Contrôle qualité",
+            "definition": "Ensemble de vérifications qui établissent qu’un médicament et son procédé respectent les critères fixés.",
+            "source": "EMA · biological medicines: quality and manufacturing",
+            "x": 50,
+            "y": 48
+          },
+          {
+            "title": "Comment les biotechnologies peuvent-elles nous aider à révéler une maladie ?",
+            "body": "Un test de diagnostic recherche dans un échantillon un indice associé à une maladie : par exemple un fragment de microorganisme, une molécule ou une réponse du système immunitaire. Certains tests utilisent des anticorps qui reconnaissent une cible ; d’autres repèrent du matériel génétique, que des méthodes comme la PCR copient pour le rendre détectable. Des biotechnologies servent à produire des réactifs, comme des protéines ou des anticorps, qui entrent dans certains tests. Les performances du test doivent être évaluées : un résultat ne s’interprète pas sans tenir compte du contexte et des caractéristiques de la méthode.",
+            "term": "Diagnostic in vitro",
+            "definition": "Examen réalisé sur un échantillon prélevé, pour fournir une information sur l’état de santé.",
+            "source": "Commission européenne · in vitro diagnostic medical devices",
+            "x": 50,
+            "y": 48
+          }
+        ]
+      }
+    ]
+  },
+  "industrial": {
+    "name": "Biotechnologies industrielles",
+    "subtitle": "De l’usine cellulaire aux produits de la bioéconomie : technologies, automatisation, industrialisation et applications.",
+    "tag": "BIO-INDUSTRIES",
+    "color": "#8ce7c1",
+    "icon": "⬡",
+    "rooms": [
+      {
+        "name": "Le pôle des biotechnologies industrielles",
+        "asset": "industrial_exterior",
+        "subtitle": "Les grandes questions de la production industrielle avec le vivant.",
+        "points": [
+          {
+            "title": "Demain, tout bioproduire ?",
+            "body": "Les microorganismes fabriquent déjà des enzymes, des ingrédients, des molécules utilisées en pharmacie et des matériaux biosourcés. Le vivant peut être intéressant pour certaines molécules difficiles à obtenir autrement ou pour remplacer certains procédés pétrosourcés. Mais il ne peut pas tout produire, et changer de procédé n’est pas toujours pertinent. Il faut obtenir assez de produit, le récupérer et le purifier, puis vérifier la fiabilité et le coût de l’ensemble. Il faut aussi comparer les ressources consommées et les impacts : la question est de savoir dans quelles conditions la bioproduction apporte un bénéfice.",
+            "term": "Bioproduction",
+            "definition": "Fabrication de produits à l’aide de cellules ou de microorganismes.",
+            "source": "ADEME · analyse du cycle de vie",
+            "x": 34,
+            "y": 43
+          },
+          {
+            "title": "Tu as déjà vu une usine… cellulaire ?",
+            "body": "Chaque cellule peut fonctionner comme une mini-usine. Certaines bactéries, levures ou moisissures fabriquent naturellement des molécules utiles ; d’autres sont sélectionnées ou modifiées pour produire une substance précise. Cultivé dans un bioréacteur, le microorganisme utilise des nutriments et en transforme une partie en enzyme, vitamine, arôme ou autre molécule. Le produit est ensuite récupéré et purifié. Le plus souvent, c’est la molécule fabriquée qui est utilisée, pas la cellule productrice.",
+            "term": "Bioréacteur",
+            "definition": "Cuve où l’on cultive des cellules ou des microorganismes dans des conditions contrôlées.",
+            "source": "INRAE · bioprocédés",
+            "x": 68,
+            "y": 59
+          }
+        ]
+      },
+      {
+        "name": "La plateforme de bioproduction industrielle",
+        "asset": "industrial_technologies",
+        "subtitle": "Du choix de la souche à sa mise à l’épreuve en conditions de production.",
+        "points": [
+          {
+            "title": "De nouveaux microorganismes conçus sur mesure",
+            "body": "Pour fabriquer une molécule, les scientifiques peuvent améliorer un microorganisme déjà connu : l’aider à utiliser une matière première, à produire davantage la molécule recherchée ou à mieux supporter les conditions d’une cuve. Ils sélectionnent des souches ou modifient leur matériel génétique et leur métabolisme. Puis ils conçoivent, construisent, testent et améliorent leurs solutions par étapes. Une souche prometteuse au laboratoire ne fonctionne pas toujours aussi bien à grande échelle : elle doit être évaluée dans des conditions proches de la production.",
+            "term": "Biologie de synthèse",
+            "definition": "Démarche qui conçoit ou modifie des systèmes biologiques pour leur donner des fonctions recherchées.",
+            "source": "Commission européenne · biotechnology",
+            "x": 30,
+            "y": 43
+          }
+        ]
+      },
+      {
+        "name": "La biofonderie — Biotechnology 4.0",
+        "asset": "industrial_automation",
+        "subtitle": "Automatiser les essais, suivre les cultures et organiser le passage à l’échelle.",
+        "points": [
+          {
+            "title": "Une bioindustrie 4.0 : la bio-usine du futur",
+            "body": "Dans une bioindustrie, des capteurs peuvent mesurer la température, le pH ou l’oxygène d’une cuve. Des logiciels rassemblent ces données et aident les équipes à suivre la culture. La robotique et l’automatisation accélèrent certaines opérations répétitives, comme la préparation d’échantillons. Des modèles numériques peuvent représenter un procédé et aider à anticiper son évolution. Ces outils assistent les équipes : ils ne remplacent ni l’expérience ni la validation des résultats.",
+            "term": "Bioindustrie 4.0",
+            "definition": "Usage de capteurs, données et automatisation pour mieux suivre et piloter des procédés industriels.",
+            "source": "INRAE · procédés biotechnologiques",
+            "x": 28,
+            "y": 42
+          },
+          {
+            "title": "À quoi ressemble une biofonderie ?",
+            "body": "Une biofonderie réunit des équipements automatisés, des robots de pipetage, des microplaques, des analyseurs et des outils informatiques. Elle aide à préparer et comparer de nombreuses souches ou conditions expérimentales selon des méthodes standardisées. Son intérêt dépend autant de l’organisation des expériences et de l’expertise du personnel que des robots. Les résultats doivent encore être confirmés et testés à plus grande échelle.",
+            "term": "Biofonderie",
+            "definition": "Installation réunissant méthodes et équipements automatisés pour accélérer la conception, la fabrication et l’essai de systèmes biologiques.",
+            "source": "Ginkgo Bioworks / UK Biofoundry Network · principes de biofoundry",
+            "x": 72,
+            "y": 60
+          }
+        ]
+      }
+    ]
+  },
+  "research": {
+    "name": "Recherche & Innovation",
+    "subtitle": "Comment fonctionne la recherche ? Qui y travaille et comment naissent les innovations ?",
+    "tag": "RECHERCHE",
+    "color": "#c9b4ff",
+    "icon": "✧",
+    "rooms": [
+      {
+        "name": "Le parvis de la recherche",
+        "asset": "research_exterior",
+        "subtitle": "Entrez pour découvrir pourquoi et comment on fait avancer les connaissances, avec toute une diversité de métiers.",
+        "points": []
+      },
+      {
+        "name": "Le grand hall de la recherche",
+        "asset": "research_hall",
+        "subtitle": "Comprendre la recherche fondamentale, son organisation et les échanges entre science et société.",
+        "points": [
+          {
+            "title": "Pourquoi chercher sans savoir à quoi cela servira ?",
+            "body": "La recherche fondamentale cherche d’abord à comprendre des phénomènes, sans viser nécessairement une application immédiate. Découvrir comment fonctionne une cellule ou quel rôle joue une protéine peut, bien des années plus tard, contribuer à un médicament, à une technique ou à une innovation encore inattendue. Certaines découvertes n’aboutissent pas à un produit : elles enrichissent néanmoins nos connaissances.",
+            "term": "Recherche fondamentale",
+            "definition": "Travaux visant principalement à acquérir de nouvelles connaissances sans application pratique précise envisagée.",
+            "source": "OCDE · Manuel de Frascati, 2015",
+            "x": 45,
+            "y": 33
+          },
+          {
+            "title": "De la connaissance à l’innovation",
+            "body": "Recherche fondamentale, recherche appliquée et développement expérimental ont des objectifs différents : comprendre, répondre à un problème identifié ou concevoir et améliorer un produit ou un procédé. La recherche et développement (R&D) industrielle peut mobiliser ces différentes activités. Ce n’est pas une chaîne obligatoire à sens unique : une difficulté rencontrée dans l’industrie peut aussi faire naître de nouvelles questions de recherche fondamentale.",
+            "term": "Recherche et développement (R&D)",
+            "definition": "Ensemble d’activités créatives et systématiques visant à accroître les connaissances ou à en développer des applications.",
+            "source": "OCDE · Manuel de Frascati, 2015",
+            "x": 79,
+            "y": 30
+          },
+          {
+            "title": "La science se construit collectivement",
+            "body": "Une découverte s’appuie sur des travaux précédents. Les chercheurs échangent, publient leurs résultats et les confrontent à la critique scientifique. D’autres équipes peuvent reprendre les méthodes ou les vérifier dans un nouveau contexte. Une étude isolée ne suffit pas toujours à conclure : la confiance progresse avec l’accumulation d’observations solides et reproductibles.",
+            "term": "Évaluation par les pairs",
+            "definition": "Examen critique d’un travail scientifique par d’autres spécialistes du domaine.",
+            "source": "CNRS · Publications et intégrité scientifique",
+            "x": 50,
+            "y": 66
+          }
+        ]
+      },
+      {
+        "name": "Dans les coulisses d’un laboratoire",
+        "asset": "research_lab_team",
+        "subtitle": "Paillasses, réunions et rencontres : la recherche est une activité collective.",
+        "points": [
+          {
+            "title": "Tous chercheurs ? Pas exactement !",
+            "body": "La recherche mobilise des techniciens, assistants ingénieurs, ingénieurs d’études, ingénieurs de recherche, doctorants, chercheurs et enseignants-chercheurs, mais aussi des personnels administratifs et de soutien. Leurs fonctions sont différentes et complémentaires : préparer des expériences, développer des méthodes, gérer des équipements, analyser des résultats, coordonner des projets ou approfondir une question scientifique. Aucun métier ne suffit à lui seul.",
+            "term": "Métiers de la recherche",
+            "definition": "Ensemble des professions scientifiques, techniques et de soutien nécessaires aux activités de recherche.",
+            "source": "CNRS · Métiers et carrières",
+            "x": 18,
+            "y": 35
+          },
+          {
+            "title": "À quoi ressemble la vie d’un laboratoire de recherche ?",
+            "body": "La recherche ne se limite pas à la paillasse : les équipes préparent des protocoles, conduisent des expériences, analysent leurs résultats et participent à des réunions pour organiser leurs travaux. Elles accueillent des étudiants, des stagiaires et parfois des classes. Elles présentent aussi leurs travaux à des conférences, des congrès et lors de rencontres avec le public, comme la Fête de la science. Faire de la recherche, c’est aussi expliquer et partager.",
+            "term": "Médiation scientifique",
+            "definition": "Actions visant à rendre les connaissances et les démarches scientifiques accessibles à différents publics.",
+            "source": "Ministère chargé de la Recherche · Fête de la science",
+            "x": 75,
+            "y": 30
+          },
+          {
+            "title": "Les plateformes technologiques en support à la recherche",
+            "body": "Les équipes ont parfois besoin d’appareils coûteux, complexes à utiliser ou nécessitant des méthodes très spécialisées. Des plateformes technologiques mutualisées regroupent ces moyens et les personnels qui savent les mettre en œuvre. Elles conseillent les chercheurs, réalisent des analyses, développent des techniques et forment les utilisateurs. Ce sont des lieux de savoir-faire autant que de technologie.",
+            "term": "Plateforme technologique",
+            "definition": "Structure qui met à disposition des équipements, des méthodes et des compétences spécialisées pour des projets scientifiques.",
+            "source": "CNRS · Plateformes et infrastructures de recherche",
+            "x": 61,
+            "y": 52
+          }
+        ]
+      },
+      {
+        "name": "De la découverte à l’innovation responsable",
+        "asset": "research_innovation_responsable",
+        "subtitle": "Transfert, propriété intellectuelle, modèles alternatifs et éthique de la recherche.",
+        "points": [
+          {
+            "title": "Comment une découverte devient-elle une innovation ?",
+            "body": "La recherche peut ouvrir de nouvelles possibilités, mais un résultat de laboratoire ne suffit pas à créer un médicament ou un procédé. La recherche et développement industrielle, les partenariats, les essais de faisabilité et le transfert technologique permettent d’explorer des applications. Certaines idées débouchent sur une entreprise ou un produit ; d’autres restent au stade de la connaissance ou nécessitent encore des années de travail.",
+            "term": "Transfert technologique",
+            "definition": "Processus qui favorise l’utilisation de connaissances et de technologies issues de la recherche dans de nouveaux contextes.",
+            "source": "OCDE · Manuel de Frascati ; organismes de valorisation de la recherche",
+            "x": 32,
+            "y": 23
+          },
+          {
+            "title": "Une découverte peut-elle être brevetée ?",
+            "body": "Une découverte scientifique n’est pas automatiquement brevetable. Un brevet protège une invention répondant notamment à des conditions de nouveauté, d’activité inventive et d’application industrielle. Publier avant de déposer peut compromettre la nouveauté. Les chercheurs doivent donc parfois coordonner publication, confidentialité et protection de résultats pouvant donner lieu à une invention.",
+            "term": "Brevet",
+            "definition": "Titre de propriété industrielle conférant, sous conditions et pour une durée limitée, des droits sur une invention.",
+            "source": "INPI · Brevets et brevetabilité",
+            "x": 78,
+            "y": 25
+          },
+          {
+            "title": "Peut-on faire de la recherche sans animaux ?",
+            "body": "La recherche utilise aujourd’hui plusieurs alternatives ou compléments aux modèles animaux : cultures cellulaires, organoïdes, organes sur puce et simulations informatiques. Leur objectif est de remplacer l’animal quand c’est possible, de réduire son utilisation et de raffiner les procédures pour limiter la souffrance : ce sont les 3R. Ces outils ne reproduisent toutefois pas encore tous les phénomènes d’un organisme entier.",
+            "term": "Principe des 3R",
+            "definition": "Remplacer, réduire, raffiner : trois exigences destinées à limiter l’utilisation et la souffrance des animaux en recherche.",
+            "source": "Directive européenne 2010/63/UE · EFSA",
+            "x": 64,
+            "y": 53
+          },
+          {
+            "title": "Peut-on tout faire au nom de la science ?",
+            "body": "« Science sans conscience n’est que ruine de l’âme. » Cette formule de François Rabelais apparaît dans Pantagruel (1532). Elle rappelle que la connaissance doit s’accompagner d’une réflexion sur ses usages et ses conséquences. En recherche, cela implique notamment le respect des personnes et de leur consentement, la protection des données, le bien-être animal, l’intégrité scientifique, la sécurité et l’attention aux impacts environnementaux.",
+            "term": "Éthique de la recherche",
+            "definition": "Principes et réflexion qui guident les pratiques scientifiques et les responsabilités envers les personnes, le vivant et la société.",
+            "source": "François Rabelais · Pantagruel (1532) ; cadres d’éthique et d’intégrité scientifique",
+            "x": 82,
+            "y": 71
+          }
+        ]
+      }
+    ]
+  },
+  "orientation": {
+    "name": "Orientation & Métiers",
+    "subtitle": "Dans chaque bâtiment, des personnes et des savoir-faire différents.",
+    "tag": "PARCOURS",
+    "color": "#ddd3ff",
+    "icon": "↗",
+    "rooms": [
+      {
+        "name": "L’espace des métiers",
+        "asset": "orientation_exterior",
+        "subtitle": "Observer les gestes et responsabilités de métiers complémentaires.",
+        "points": [
+          {
+            "title": "Produire, analyser et organiser la qualité : trois activités différentes",
+            "term": "Compétence professionnelle",
+            "definition": "Savoir agir dans une situation de travail avec les connaissances et méthodes adaptées.",
+            "body": "Conduire une culture, réaliser une analyse et organiser la qualité mobilisent des activités différentes. En production, on suit le procédé et ses paramètres. Au contrôle, on prépare les échantillons, réalise les mesures et rend compte des résultats. En qualité, on travaille sur les exigences, les documents et l’amélioration des pratiques. Les équipes collaborent tout au long de la fabrication.",
+            "source": "Onisep · S26–S28 · Intitulés variables selon les entreprises"
+          },
+          {
+            "title": "Les métiers sont partout",
+            "issue": "Des compétences se retrouvent en santé, alimentation, agriculture et environnement.",
+            "solution": "Une spécialité peut ouvrir plusieurs secteurs d’activité.",
+            "term": "Compétence transférable",
+            "definition": "Savoir-faire utile dans différents contextes professionnels."
+          },
+          {
+            "title": "La curiosité ouvre des portes",
+            "issue": "Pas besoin de tout connaître pour commencer à explorer.",
+            "solution": "Rencontrer des professionnels, observer un atelier et tester des stages aide à construire ses choix.",
+            "term": "Immersion",
+            "definition": "Découverte d’une activité ou d’un lieu en situation réelle."
+          }
+        ]
+      },
+      {
+        "name": "L’espace des formations",
+        "asset": "orientation_hall",
+        "subtitle": "Reconnaître les diplômes et les compétences préparées.",
+        "points": [
+          {
+            "title": "Trois BTS pour explorer des activités complémentaires",
+            "term": "BTS",
+            "definition": "Diplôme national de l’enseignement supérieur préparé en deux ans après le baccalauréat.",
+            "body": "Le BTS biotechnologie en recherche et en production prépare à des techniques du vivant mobilisées en recherche et en production. Le BTS bioanalyses en laboratoire de contrôle se concentre sur les méthodes d’analyse et le fonctionnement du laboratoire. Le BTS bioqualité porte sur la qualité dans les bio-industries. Ces BTS se préparent en deux ans ; l’admission dépend du dossier et de la formation.",
+            "source": "Onisep, 2026 · S26–S28 · Intitulés vérifiés au 25/10/2026"
+          },
+          {
+            "title": "Plusieurs niveaux d’études",
+            "issue": "Tous les postes ne demandent pas la même formation.",
+            "solution": "BTS, BUT, licences, écoles d’ingénieurs et universités ouvrent des rôles complémentaires.",
+            "term": "BTS / BUT",
+            "definition": "Diplômes de l’enseignement supérieur à forte composante technologique."
+          },
+          {
+            "title": "Des lieux en Occitanie",
+            "issue": "La région dispose de laboratoires, d’entreprises et d’établissements de formation.",
+            "solution": "Le campus peut les relier au fil de la visite grâce aux portraits et aux cartes de formations.",
+            "term": "Alternance",
+            "definition": "Formation articulant périodes en établissement et en milieu professionnel."
+          }
+        ]
+      }
+    ]
+  },
+  "analyses": {
+    "name": "Bioanalyses & Contrôles",
+    "subtitle": "Un même laboratoire, des analyses pour des univers très différents.",
+    "tag": "ANALYSES & QUALITÉ",
+    "color": "#a8d8f4",
+    "icon": "⌬",
+    "rooms": [
+      {
+        "name": "L’accueil des prélèvements",
+        "asset": "analyses_exterior",
+        "subtitle": "Prélever, identifier et enregistrer les échantillons à analyser.",
+        "points": [
+          {
+            "title": "Qu’arrive-t-il au laboratoire ?",
+            "issue": "Une eau transparente, un aliment d’apparence normale ou une matière première ne révèlent pas tout à l’œil nu.",
+            "solution": "Les laboratoires recherchent micro-organismes, substances et paramètres adaptés à chaque question.",
+            "term": "Échantillon",
+            "definition": "Petite quantité prélevée pour représenter un produit ou un milieu.",
+            "x": 46,
+            "y": 45
+          },
+          {
+            "title": "Un laboratoire pour plusieurs secteurs",
+            "issue": "Les producteurs, collectivités, industriels et organismes de santé doivent mesurer des caractéristiques très diverses.",
+            "solution": "Des plateformes spécialisées proposent des essais pour l’eau, les sols, l’alimentation et certains produits de santé.",
+            "term": "Laboratoire d’essais",
+            "definition": "Structure réalisant des mesures, analyses et essais selon des méthodes définies.",
+            "x": 84,
+            "y": 59
+          },
+          {
+            "title": "Le prélèvement compte aussi",
+            "issue": "Une analyse très précise ne peut pas corriger un échantillon mal prélevé ou dégradé durant le transport.",
+            "solution": "Identification, contenants adaptés, conservation et traçabilité font partie de la fiabilité d’un résultat.",
+            "term": "Pré-analytique",
+            "definition": "Tout ce qui précède la mesure, du prélèvement à la préparation.",
+            "x": 26,
+            "y": 43
+          }
+        ]
+      },
+      {
+        "name": "Les laboratoires d’analyse et de contrôle",
+        "asset": "analyses_hall",
+        "subtitle": "PCR, cultures, chromatographie et contrôles adaptés à chaque question.",
+        "points": [
+          {
+            "title": "Détecter un ADN ne démontre pas toujours la présence d’un microbe vivant",
+            "term": "PCR",
+            "definition": "Technique permettant d’amplifier une séquence d’ADN ciblée.",
+            "x": 73,
+            "y": 35,
+            "body": "Une PCR sur ADN recherche une séquence ciblée en l’amplifiant. Elle peut détecter de l’ADN provenant de microorganismes vivants, mais aussi de cellules mortes. Pour savoir si un microorganisme est vivant ou cultivable, il faut une méthode ou une stratégie adaptée à cette question. La méthode choisie détermine donc ce que le résultat permet de conclure.",
+            "source": "Anses · S29 · Conclusion dépendante de la méthode"
+          },
+          {
+            "title": "Des traces invisibles dans l’eau",
+            "issue": "Des contaminants peuvent être présents à faible concentration, sans goût ni odeur.",
+            "solution": "Des instruments de chimie analytique aident à rechercher et mesurer des molécules ciblées.",
+            "term": "Chromatographie",
+            "definition": "Technique de séparation de constituants d’un mélange pour les analyser.",
+            "x": 67,
+            "y": 69
+          },
+          {
+            "title": "La fiabilité, ça se démontre",
+            "issue": "Deux résultats différents ne sont pas nécessairement dus à une erreur : la méthode et les conditions comptent.",
+            "solution": "Contrôles de méthode, étalons, vérifications et accréditation sur des activités précises renforcent la confiance.",
+            "term": "Accréditation",
+            "definition": "Reconnaissance formelle de la compétence pour des activités déterminées.",
+            "x": 28,
+            "y": 57
+          }
+        ]
+      },
+      {
+        "name": "Le plateau de biologie médicale",
+        "asset": "analyses_medical",
+        "subtitle": "Examens biologiques pour le diagnostic et le suivi de la santé.",
+        "points": [
+          {
+            "title": "Un prélèvement, beaucoup d’informations",
+            "issue": "Un échantillon de sang peut apporter des informations différentes selon ce que l’on recherche.",
+            "solution": "Le laboratoire peut étudier des cellules sanguines, des molécules et des marqueurs, sur prescription ou indication appropriée.",
+            "term": "Hématologie",
+            "definition": "Domaine de la biologie médicale consacré notamment au sang et à ses cellules.",
+            "x": 35,
+            "y": 64
+          },
+          {
+            "title": "À la recherche d’un agent infectieux",
+            "issue": "Identifier une infection demande parfois de détecter un élément très spécifique.",
+            "solution": "Selon l’indication, culture, tests immunologiques ou amplification d’acides nucléiques peuvent contribuer au diagnostic.",
+            "term": "PCR",
+            "definition": "Méthode permettant d’amplifier une séquence d’ADN pour la détecter ou l’étudier.",
+            "x": 73,
+            "y": 39
+          },
+          {
+            "title": "Le résultat a besoin d’un contexte",
+            "issue": "Un résultat biologique isolé ne suffit pas toujours pour poser un diagnostic.",
+            "solution": "Biologistes médicaux et soignants l’interprètent avec les symptômes, l’histoire clinique et les limites de la méthode.",
+            "term": "Biologiste médical",
+            "definition": "Professionnel de santé responsable de la validation et de l’interprétation des examens.",
+            "x": 56,
+            "y": 52
+          },
+          {
+            "title": "Une accréditation couvre des activités précises",
+            "term": "Portée d’accréditation",
+            "definition": "Périmètre des activités pour lesquelles la compétence a été reconnue.",
+            "x": 84,
+            "y": 67,
+            "body": "L’accréditation reconnaît la compétence d’un laboratoire pour un périmètre défini. En biologie médicale, le référentiel est ISO 15189. Pour la biologie médico-légale, le Cofrac indique ISO/IEC 17025. Le nom du laboratoire ou la présence d’un logo ne suffisent donc pas : il faut regarder quelles activités sont couvertes par sa portée d’accréditation.",
+            "source": "Cofrac · S16 · Référentiels selon le domaine"
+          }
+        ]
+      }
+    ]
+  },
+  "forensic": {
+    "name": "Sciences forensiques",
+    "subtitle": "Les sciences du vivant aident à comprendre des traces, pas à inventer un coupable.",
+    "tag": "POLICE SCIENTIFIQUE",
+    "color": "#cdb4ef",
+    "icon": "◎",
+    "rooms": [
+      {
+        "name": "Le pôle des sciences forensiques",
+        "asset": "forensic_exterior",
+        "subtitle": "Des traces biologiques aux questions posées par les experts.",
+        "points": [
+          {
+            "title": "Sciences forensiques : étudier des traces biologiques",
+            "issue": "Une enquête peut comporter des questions auxquelles les témoignages seuls ne répondent pas.",
+            "solution": "Des spécialistes recherchent, préservent et analysent des traces à l’aide de méthodes scientifiques.",
+            "term": "Science forensique",
+            "definition": "Application des sciences à des questions de justice et d’enquête.",
+            "x": 46,
+            "y": 43
+          },
+          {
+            "title": "Une trace n’est pas une preuve absolue",
+            "issue": "Une trace biologique peut provenir d’un contact, parfois indirect, et ne raconte pas tout l’événement.",
+            "solution": "Son interprétation tient compte du contexte, des autres indices et des possibilités de contamination.",
+            "term": "Trace biologique",
+            "definition": "Matière d’origine biologique pouvant être recueillie et analysée.",
+            "x": 74,
+            "y": 56
+          },
+          {
+            "title": "Les microbes peuvent-ils aider à dater un décès ?",
+            "term": "Microbiote",
+            "definition": "Ensemble des microorganismes présents dans un milieu donné.",
+            "x": 23,
+            "y": 67,
+            "body": "Après la mort, les communautés microbiennes du corps et du sol évoluent avec la décomposition. Les chercheurs analysent leur ADN pour rechercher des changements associés au temps écoulé. Une étude publiée en 2024 a suivi 36 corps humains dans trois sites. Ces travaux visent à améliorer l’estimation du délai depuis le décès. Le milieu et la température influencent les communautés observées ; la méthode demande encore des validations dans des situations variées.",
+            "source": "Burcham et al., Nature Microbiology, 2024 · S13–S14 · Recherche en cours"
+          }
+        ]
+      },
+      {
+        "name": "Le laboratoire de génétique et de toxicologie",
+        "asset": "forensic_hall",
+        "subtitle": "ADN, toxicologie et analyses réalisées dans des conditions contrôlées.",
+        "points": [
+          {
+            "title": "Un profil ADN renseigne sur une origine, pas sur toute une histoire",
+            "term": "Profil génétique",
+            "definition": "Ensemble de caractéristiques de l’ADN utilisé pour une comparaison.",
+            "x": 76,
+            "y": 35,
+            "body": "L’analyse de régions variables de l’ADN permet d’établir un profil génétique et de comparer des traces. Un mélange peut contenir l’ADN de plusieurs personnes. L’interprétation doit distinguer deux questions : qui a pu contribuer à la trace, et comment cette trace s’est retrouvée là. Une correspondance ne donne pas, à elle seule, les circonstances ni la date du dépôt.",
+            "source": "NIST, 2019 · S17 · Interprétation contextualisée"
+          },
+          {
+            "title": "Éviter de mélanger les traces",
+            "issue": "Un résultat peut être compromis si des échantillons sont mélangés ou mal identifiés.",
+            "solution": "Procédures de prélèvement, zones adaptées, contrôles et documentation réduisent le risque de contamination.",
+            "term": "Contamination croisée",
+            "definition": "Transfert involontaire de matière d’un échantillon à un autre.",
+            "x": 44,
+            "y": 70
+          },
+          {
+            "title": "Qu’a-t-on vraiment mesuré ?",
+            "issue": "Une substance détectée dans un prélèvement ne suffit pas toujours à conclure sur ses effets.",
+            "solution": "La toxicologie associe analyses chimiques et interprétation du contexte médico-légal.",
+            "term": "Toxicologie médico-légale",
+            "definition": "Étude de substances et de leurs effets dans un contexte judiciaire.",
+            "x": 86,
+            "y": 60
+          },
+          {
+            "title": "Conserver une trace fiable",
+            "issue": "L’histoire d’un échantillon doit pouvoir être reconstituée sans rupture.",
+            "solution": "Identification, scellés, mouvements documentés et conditions de conservation soutiennent l’intégrité des analyses.",
+            "term": "Chaîne de conservation",
+            "definition": "Suivi documenté des manipulations et transferts d’un élément de preuve.",
+            "x": 25,
+            "y": 44
+          }
+        ]
+      }
+    ]
+  },
+  "marine": {
+    "name": "Biotechnologies marines",
+    "subtitle": "Explorer les algues et le vivant marin pour imaginer des solutions utiles.",
+    "tag": "RESSOURCES MARINES",
+    "color": "#7cdbed",
+    "icon": "≈",
+    "rooms": [
+      {
+        "name": "Le pôle des bioressources marines",
+        "asset": "marine_exterior",
+        "subtitle": "De la biodiversité marine aux laboratoires de recherche et de culture.",
+        "points": [
+          {
+            "title": "Pourquoi explorer le milieu marin ?",
+            "issue": "La biodiversité marine abrite des organismes et molécules très variés, encore inégalement connus.",
+            "solution": "La recherche étudie leurs fonctions et leurs usages potentiels, tout en préservant les écosystèmes.",
+            "term": "Bioprospection",
+            "definition": "Recherche de propriétés utiles dans la diversité biologique.",
+            "x": 35,
+            "y": 43
+          },
+          {
+            "title": "Algues : pas toutes identiques",
+            "issue": "Une algue visible sur une plage et une microalgue cultivée en cuve diffèrent beaucoup.",
+            "solution": "Des approches distinctes permettent de cultiver, identifier et valoriser macroalgues et microalgues.",
+            "term": "Microalgue",
+            "definition": "Organisme photosynthétique microscopique, pouvant être unicellulaire.",
+            "x": 72,
+            "y": 61
+          },
+          {
+            "title": "Une ressource à préserver",
+            "issue": "Prélever sans connaître le renouvellement d’une population peut dégrader le milieu.",
+            "solution": "Aquaculture, culture contrôlée et approvisionnement responsable sont étudiés selon les espèces et usages.",
+            "term": "Algoculture",
+            "definition": "Culture d’algues dans un système aménagé ou en milieu naturel.",
+            "x": 78,
+            "y": 73
+          }
+        ]
+      },
+      {
+        "name": "La plateforme de culture des microalgues",
+        "asset": "marine_hall",
+        "subtitle": "Photobioréacteurs, lumière et production de biomasse microalgale.",
+        "points": [
+          {
+            "title": "La lumière nourrit les cultures",
+            "issue": "De nombreuses microalgues utilisent la lumière et le CO₂ pour leur croissance.",
+            "solution": "Des photobioréacteurs apportent des conditions contrôlées de culture, adaptées aux espèces.",
+            "term": "Photobioréacteur",
+            "definition": "Système de culture utilisant la lumière pour faire croître des organismes photosynthétiques.",
+            "x": 66,
+            "y": 37
+          },
+          {
+            "title": "De l’algue à l’ingrédient",
+            "issue": "Une biomasse algale est un mélange complexe et ne se transforme pas directement en produit fini.",
+            "solution": "Récolte, extraction et purification permettent d’obtenir des fractions d’intérêt, puis de les caractériser.",
+            "term": "Extraction",
+            "definition": "Opération visant à récupérer une ou plusieurs substances d’une matière.",
+            "x": 29,
+            "y": 68
+          },
+          {
+            "title": "Des molécules de couleurs",
+            "issue": "Certaines espèces produisent des pigments et autres composés recherchés.",
+            "solution": "Des molécules sont étudiées pour leurs propriétés, leur stabilité et leurs usages industriels possibles.",
+            "term": "Pigment naturel",
+            "definition": "Molécule ou mélange de molécules à l’origine d’une coloration.",
+            "x": 79,
+            "y": 68
+          }
+        ]
+      },
+      {
+        "name": "Le laboratoire d’extraction et de formulation",
+        "asset": "marine_pilot",
+        "subtitle": "Extraire des pigments et des molécules pour des usages identifiés.",
+        "points": [
+          {
+            "title": "La cosmétique s’intéresse aux algues",
+            "issue": "Les formulations recherchent des ingrédients aux propriétés bien établies.",
+            "solution": "Des extraits d’algues sont étudiés pour leurs fonctions dans des produits cosmétiques, avec évaluations adaptées.",
+            "term": "Actif cosmétique",
+            "definition": "Ingrédient choisi pour contribuer à un effet cosmétique recherché.",
+            "x": 77,
+            "y": 42
+          },
+          {
+            "title": "Un pigment d’algue devient un marqueur fluorescent",
+            "term": "Fluorescence",
+            "definition": "Émission de lumière après absorption d’une lumière d’excitation.",
+            "x": 32,
+            "y": 67,
+            "body": "La phycoérythrine est une protéine pigmentaire présente chez des algues rouges. Elle absorbe de la lumière et en réémet par fluorescence. Couplée à un anticorps, elle peut servir à repérer une cible biologique en cytométrie ou en microscopie. Son intérêt dépasse donc la coloration d’un produit : ses propriétés lumineuses deviennent un outil pour analyser des cellules et des molécules.",
+            "source": "Leney et al., FEBS Journal, 2018 · S15 · Usage établi"
+          },
+          {
+            "title": "Biosourcé et biomatériau désignent deux choses différentes",
+            "term": "Biosourcé",
+            "definition": "Issu en tout ou partie de matières d’origine biologique.",
+            "x": 72,
+            "y": 71,
+            "body": "Un matériau biosourcé provient en tout ou partie de ressources biologiques. Un biomatériau est conçu pour une utilisation médicale en interaction avec des tissus ou des fonctions de l’organisme. Des composés d’algues, comme l’alginate, peuvent entrer dans certains biomatériaux. Mais un emballage fabriqué à partir d’algues reste un matériau biosourcé ; il ne devient pas pour autant un biomatériau médical.",
+            "source": "Inserm, 2017 · S06 · Distinction de vocabulaire"
+          },
+          {
+            "title": "La mer n’est pas une mine sans fin",
+            "issue": "Produire un extrait peut mobiliser eau, énergie et traitements chimiques.",
+            "solution": "L’intérêt environnemental se juge sur toute la chaîne : culture, transformation, transport et usage.",
+            "term": "Analyse du cycle de vie",
+            "definition": "Méthode d’évaluation des impacts environnementaux d’un produit ou procédé.",
+            "x": 18,
+            "y": 42
+          }
+        ]
+      }
+    ]
+  },
+  "space": {
+    "name": "Space Biotechs",
+    "subtitle": "Une exploration sobre et réaliste des biotechnologies pour l’espace.",
+    "tag": "SPATIAL",
+    "color": "#8fb8ff",
+    "icon": "✦",
+    "rooms": [
+      {
+        "name": "Le parvis Space Biotechs",
+        "asset": "space_exterior",
+        "subtitle": "Un bâtiment sobre, aux codes bleu nuit, consacré aux biotechnologies spatiales.",
+        "points": [
+          {
+            "title": "Pourquoi des biotechnologies pour l’espace ?",
+            "issue": "Dans une mission longue, il faut gérer la santé, les ressources et l’autonomie avec très peu de marge.",
+            "solution": "Les biotechnologies aident à produire, recycler, surveiller et réparer en s’appuyant sur le vivant.",
+            "term": "Autonomie",
+            "definition": "Capacité d’un système à fonctionner avec peu d’apports extérieurs."
+          },
+          {
+            "title": "Des contraintes extrêmes",
+            "issue": "Environnement fermé, volumes limités, eau et air précieux : tout doit être optimisé.",
+            "solution": "Les solutions spatiales recherchent la sobriété, la miniaturisation et la robustesse.",
+            "term": "Système embarqué",
+            "definition": "Dispositif conçu pour fonctionner directement dans un véhicule ou un habitat spatial."
+          },
+          {
+            "title": "Des retombées pour la Terre",
+            "issue": "Ce qui marche dans l’espace doit souvent être simple, fiable et économe.",
+            "solution": "Beaucoup d’idées développées pour l’espace peuvent aussi inspirer la santé, l’eau, l’alimentation ou la bioéconomie sur Terre.",
+            "term": "Retombées",
+            "definition": "Applications réutilisées dans d’autres secteurs après leur développement initial."
+          }
+        ]
+      },
+      {
+        "name": "Le hall des biotechnologies spatiales",
+        "asset": "space_hall",
+        "subtitle": "Diagnostics, microalgues, support-vie et ambiance bleu nuit pour découvrir les grands enjeux.",
+        "points": [
+          {
+            "title": "Suivre la santé à bord",
+            "issue": "Quand on est loin d’un hôpital, il faut détecter vite un problème biologique ou physiologique.",
+            "solution": "Des outils de bioanalyse compacts permettent de surveiller certains paramètres et d’aider à la décision.",
+            "term": "Diagnostic embarqué",
+            "definition": "Analyse réalisée directement sur le lieu de mission, sans grand laboratoire extérieur."
+          },
+          {
+            "title": "Les microalgues, discrètes mais utiles",
+            "issue": "Une mission longue a besoin de solutions polyvalentes pour produire, capter et recycler.",
+            "solution": "Les microalgues intéressent pour la biomasse, certains composés d’intérêt et leur rôle possible dans des boucles biologiques.",
+            "term": "Microalgue",
+            "definition": "Organisme microscopique photosynthétique pouvant produire de la biomasse et différents composés."
+          },
+          {
+            "title": "Fermer les boucles",
+            "issue": "Air, eau et matières ne peuvent pas être gaspillés dans un habitat isolé.",
+            "solution": "Les approches en boucle fermée cherchent à récupérer, réutiliser et régénérer les ressources.",
+            "term": "Boucle fermée",
+            "definition": "Organisation où les ressources circulent et sont réemployées autant que possible."
+          }
+        ]
+      },
+      {
+        "name": "Le laboratoire plantes & support-vie",
+        "asset": "space_orbital_lab",
+        "subtitle": "Des plantes, des cultures biologiques et des systèmes de régénération dans une ambiance spatiale réaliste.",
+        "points": [
+          {
+            "title": "Cultiver en milieu contraint",
+            "issue": "Faire pousser du vivant dans un espace fermé demande lumière, eau, nutriments et contrôle précis.",
+            "solution": "Les biotechnologies végétales et les systèmes de culture contrôlée aident à concevoir des dispositifs compacts et pilotés.",
+            "term": "Culture contrôlée",
+            "definition": "Production végétale dans un environnement où les paramètres sont surveillés et ajustés."
+          },
+          {
+            "title": "Vivre avec le vivant",
+            "issue": "Les plantes ne servent pas seulement à produire de la matière : elles participent aussi à l’équilibre d’un habitat.",
+            "solution": "Elles peuvent contribuer à des systèmes de support-vie et à une présence humaine plus durable.",
+            "term": "Support-vie",
+            "definition": "Ensemble des fonctions nécessaires pour maintenir des conditions compatibles avec la vie humaine."
+          },
+          {
+            "title": "Observer autrement",
+            "issue": "La biologie change lorsqu’on modifie fortement le contexte physique d’observation et de culture.",
+            "solution": "Les laboratoires spatiaux explorent ces comportements pour mieux comprendre et mieux concevoir les procédés.",
+            "term": "Microgravité",
+            "definition": "Situation où les effets de la gravité sont très faibles par rapport à ceux observés sur Terre."
+          }
+        ]
+      }
+    ]
+  },
+  "bioeconomy": {
+    "name": "Bioéconomie",
+    "subtitle": "Des ressources biologiques aux produits, en évaluant les usages et leurs impacts.",
+    "tag": "BIOÉCONOMIE",
+    "color": "#b6df8b",
+    "icon": "♻",
+    "rooms": [
+      {
+        "name": "Le pavillon de la bioéconomie",
+        "asset": "bioeconomy_exterior_v27",
+        "subtitle": "Découvrez comment les ressources biologiques peuvent être transformées en produits utiles.",
+        "points": [
+          {
+            "title": "Qu’appelle-t-on bioéconomie ?",
+            "body": "La bioéconomie mobilise des ressources biologiques renouvelables — plantes, algues, microorganismes ou résidus organiques — pour produire notamment des aliments, des matériaux, des molécules ou de l’énergie. Elle relie des activités agricoles, forestières, marines et industrielles. Son développement dépend des ressources disponibles et des usages que l’on choisit d’en faire.",
+            "term": "Bioéconomie",
+            "definition": "Activités qui utilisent des ressources biologiques renouvelables pour produire des biens, des matériaux, des molécules ou de l’énergie.",
+            "source": "Commission européenne · Stratégie pour une bioéconomie compétitive et durable (2025)",
+            "x": 68,
+            "y": 45
+          }
+        ]
+      },
+      {
+        "name": "À l’intérieur du pavillon Bioéconomie",
+        "asset": "bioeconomy_pavilion",
+        "subtitle": "Aliments, matériaux, molécules et énergie : que peut-on produire à partir du vivant ?",
+        "points": [
+          {
+            "title": "Une même biomasse peut-elle servir à plusieurs choses ?",
+            "body": "Parfois, une matière végétale ou un résidu peut être transformé en plusieurs produits. On peut chercher à en extraire d’abord des molécules ou des matériaux utiles, puis valoriser les fractions restantes. Cette utilisation en cascade n’est pas toujours possible : elle dépend de la qualité, de la quantité et de la disponibilité de la biomasse, ainsi que de la demande pour les produits.",
+            "term": "Valorisation en cascade",
+            "definition": "Utilisation successive des différentes fractions d’une ressource afin d’en tirer plusieurs produits ou usages.",
+            "source": "Commission européenne · Stratégie pour une bioéconomie compétitive et durable (2025)",
+            "x": 25,
+            "y": 34
+          },
+          {
+            "title": "Une bioraffinerie, comment ça marche ?",
+            "body": "Une bioraffinerie transforme une biomasse en plusieurs produits : par exemple des ingrédients, des matériaux, des molécules ou de l’énergie. Des procédés mécaniques, chimiques ou biologiques peuvent être combinés. Le procédé doit être adapté à la matière première et les produits obtenus doivent répondre à des besoins réels.",
+            "term": "Bioraffinerie",
+            "definition": "Installation qui transforme une biomasse en plusieurs produits ou ressources utiles.",
+            "source": "Commission européenne · Stratégie pour une bioéconomie compétitive et durable (2025)",
+            "x": 75,
+            "y": 34
+          },
+          {
+            "title": "Bioéconomie et développement durable",
+            "body": "La bioéconomie utilise des ressources biologiques — plantes, microorganismes, algues ou résidus organiques — pour produire des aliments, des matériaux, des molécules ou de l’énergie. Les biotechnologies industrielles peuvent y contribuer. Mais une ressource biosourcée n’est pas automatiquement durable : il faut examiner l’origine des matières premières, l’énergie et l’eau utilisées, les sols mobilisés, les transports et la fin de vie. Une analyse du cycle de vie aide à comparer les options et à repérer les compromis.",
+            "term": "Analyse du cycle de vie",
+            "definition": "Évaluation des impacts environnementaux d’un produit ou procédé sur plusieurs étapes de sa vie.",
+            "source": "ADEME · Analyse du cycle de vie ; Commission européenne · stratégie pour une bioéconomie durable (2025)",
+            "x": 72,
+            "y": 57
+          }
+        ]
+      }
+    ]
+  },
+  "europe": {
+    "name": "Europe & biotechnologies",
+    "subtitle": "Coopérations, programmes et politiques qui façonnent les biotechnologies en Europe.",
+    "tag": "DYNAMIQUES EUROPÉENNES",
+    "color": "#8ecaf3",
+    "icon": "◎",
+    "rooms": [
+      {
+        "name": "Le pavillon européen des biotechnologies",
+        "asset": "europe_biotech_exterior_v27",
+        "subtitle": "Découvrez les coopérations et les dynamiques européennes en biotechnologie.",
+        "points": [
+          {
+            "title": "Pourquoi une stratégie européenne pour les biotechnologies ?",
+            "body": "Les biotechnologies concernent la santé, l’alimentation, l’agriculture, l’industrie et l’environnement. L’Union européenne cherche à soutenir la recherche, la production et le passage des innovations vers des usages concrets. La Commission a proposé un premier acte européen sur les biotechnologies, centré notamment sur la santé ; des travaux portent aussi sur les biotechnologies industrielles et la biofabrication. Une proposition doit encore être examinée par les institutions européennes avant de devenir une règle.",
+            "term": "Acte européen sur les biotechnologies",
+            "definition": "Proposition de cadre européen visant à soutenir le développement des biotechnologies ; son contenu et son statut dépendent des décisions des institutions de l’UE.",
+            "source": "Commission européenne · European Biotech Act ; Biotech Act II (2025–2026)",
+            "x": 68,
+            "y": 45
+          }
+        ]
+      },
+      {
+        "name": "Les dynamiques européennes des biotechnologies",
+        "asset": "europe_biotech_pavilion",
+        "subtitle": "Comment les équipes, les entreprises et les institutions font avancer les biotechnologies à l’échelle européenne ?",
+        "points": [
+          {
+            "title": "Pourquoi les équipes biotech travaillent-elles ensemble en Europe ?",
+            "body": "Une équipe ne possède pas toujours seule toutes les compétences, les équipements ou les échantillons nécessaires. Des projets européens peuvent réunir des universités, des laboratoires, des entreprises et des organismes de plusieurs pays. Ils permettent de partager des connaissances, de confronter des approches et de travailler sur des défis communs.",
+            "term": "Consortium européen",
+            "definition": "Groupe de partenaires de plusieurs pays qui s’associent pour mener un projet commun.",
+            "source": "Commission européenne · Horizon Europe ; partenariats européens de recherche",
+            "x": 25,
+            "y": 34
+          },
+          {
+            "title": "Comment l’Europe soutient-elle les projets de recherche biotech ?",
+            "body": "Horizon Europe est le programme de l’Union européenne consacré à la recherche et à l’innovation. Il finance différents types de projets, dont des collaborations entre équipes et organisations de plusieurs pays. Des partenariats européens peuvent aussi coordonner des appels à projets autour de thèmes communs. Les financements se gagnent sur dossier : ils ne sont pas automatiques et les règles varient selon les appels.",
+            "term": "Horizon Europe",
+            "definition": "Programme de l’Union européenne qui soutient la recherche et l’innovation, notamment par des appels à projets et des partenariats.",
+            "source": "Commission européenne · Horizon Europe",
+            "x": 75,
+            "y": 34
+          },
+          {
+            "title": "Qui décide des règles européennes pour les biotechnologies ?",
+            "body": "La Commission européenne peut proposer une nouvelle législation. Le Parlement européen et le Conseil de l’Union européenne l’examinent, la modifient et doivent s’accorder sur un texte. Ce travail peut prendre du temps. Les propositions sur les biotechnologies cherchent notamment à mieux accompagner l’innovation tout en tenant compte de la sécurité, de la santé, de l’environnement et de la bioéthique.",
+            "term": "Législation européenne",
+            "definition": "Règles adoptées par les institutions de l’Union européenne selon une procédure commune.",
+            "source": "Commission européenne · European Biotech Act ; Parlement européen",
+            "x": 72,
+            "y": 57
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0f14">
+<meta name="description" content="Visite libre du Campus Biotechs Occitanie : explorez les espaces du vivant, leurs enjeux et leurs solutions.">
+<title>Campus Biotechs Occitanie</title>
+<link rel="stylesheet" href="./assets/campus.css">
+</head>
+<body>
+<div id="loading" role="status">Chargement du campus…</div>
+<noscript>Activez JavaScript pour explorer le campus.</noscript>
+<main id="app" aria-label="Campus Biotechs Occitanie — visite libre">
+<section id="scene" class="home" aria-label="Panorama du campus">
+<img id="campus-image" draggable="false" alt="Vue panoramique du Campus Biotechs Occitanie">
+<div id="home-hotspots">
+</div>
+<div id="discoveries">
+</div>
+</section>
+<header id="overlay-top">
+<button type="button" class="control" id="btn-back" hidden>← Campus</button>
+<button type="button" class="control" id="btn-directory" aria-controls="directory" aria-expanded="false">☷ Explorer les 13 univers</button>
+<button type="button" class="control" id="new-poles" aria-label="Voir les nouveaux pôles">Parvis 02 / 03</button>
+<span id="top-spacer">
+</span>
+<span id="room-pos" hidden>
+</span>
+<button type="button" class="control" id="full" aria-label="Plein écran" title="Plein écran">⛶</button>
+</header>
+<nav id="plaza-nav" aria-label="Naviguer entre les trois parvis">
+<button id="plaza-left" class="plaza-arrow" type="button" aria-label="Retour au parvis principal">←</button>
+<div class="plaza-pill">
+<span id="plaza-count">01 / 03</span>
+<span id="plaza-name">Parvis principal</span>
+</div>
+<button id="plaza-right" class="plaza-arrow" type="button" aria-label="Découvrir le parvis suivant">→</button>
+</nav>
+<nav id="mobile-worlds" aria-label="Accès rapide aux bâtiments sur mobile">
+</nav>
+<aside id="directory" aria-label="Choisir un lieu">
+<h2>Explorer le campus</h2>
+<p class="dir-lead">Parcourez les bâtiments et les nouveaux pôles en visite libre.</p>
+</aside>
+<section id="hero" hidden aria-live="polite">
+<small id="hero-tag">
+</small>
+<h1 id="hero-title">
+</h1>
+<p id="hero-subtitle">
+</p>
+</section>
+<nav id="location-actions" hidden aria-label="Changer de lieu">
+<button type="button" class="control" id="btn-prev">← Précédent</button>
+<button type="button" class="control" id="btn-next">Lieu suivant →</button>
+</nav>
+<nav id="locations" aria-label="Sous-espaces photoréalistes">
+</nav>
+<p id="home-guide">Explorez librement les bâtiments et utilisez les flèches pour changer de parvis</p>
+<aside id="info" aria-label="Découverte" role="dialog" aria-modal="false">
+<button id="close-info" type="button" aria-label="Fermer la découverte">×</button>
+<small id="info-context">
+</small>
+<h2 id="info-title">
+</h2>
+<p id="discovery-body">
+</p>
+<div id="term">
+<strong id="term-name">
+</strong>
+<p id="term-def">
+</p>
+</div>
+<div id="foot">
+</div>
+</aside>
+</main>
+<script type="module" src="./assets/campus.js">
+</script>
+</body>
+</html>

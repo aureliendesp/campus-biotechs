@@ -1,0 +1,12 @@
+{
+  "name": "campus-biotechs",
+  "version": "27.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Visite immersive du Campus Biotechs Occitanie, reprise de la V27 pour GitHub Pages.",
+  "scripts": {
+    "check": "node --check assets/campus.js && node scripts/check.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
