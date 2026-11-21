@@ -16,6 +16,10 @@ async function startCampus() {
   const scene = $('scene');
   const campusImg = $('campus-image');
   const hotLayer = $('home-hotspots');
+  const zoneUi = $('zone-ui');
+  const enterMarker = $('btn-enter');
+  const exploreButton = $('explore-pavilion');
+  const dnaTemplate = $('dna-icon');
   const roomHot = $('discoveries');
   const directory = $('directory');
   const directoryButton = $('btn-directory');
@@ -23,8 +27,7 @@ async function startCampus() {
   const places = $('locations');
   const homePositions = [
     [['health', 11, 30], ['industrial', 31, 34], ['research', 50, 44],
-      ['plant', 69, 44], ['environment', 83, 32], ['orientation', 91, 51],
-      ['intro', 27, 76]],
+      ['plant', 69, 44], ['environment', 83, 32], ['orientation', 91, 51]],
     [['food', 15, 47], ['analyses', 39, 47], ['forensic', 58, 53],
       ['marine', 76, 48], ['space', 91, 52]],
     [['bioeconomy', 31, 43], ['europe', 73, 43]],
@@ -37,13 +40,24 @@ async function startCampus() {
   let moveStart = null;
   let infoTrigger = null;
 
-  function makePlus(label, action) {
+  function makeHotspot(label, action, isEntry = false) {
     const button = document.createElement('button');
-    button.className = 'hot';
+    button.className = isEntry ? 'hot entry-marker' : 'hot';
     button.type = 'button';
     button.setAttribute('aria-label', label);
-    button.innerHTML = '<span class="cross" aria-hidden="true"></span><span class="hint"></span>';
-    button.querySelector('.hint').textContent = label;
+    const hint = document.createElement('span');
+    hint.className = 'hint';
+    hint.setAttribute('aria-hidden', 'true');
+    hint.textContent = label;
+    if (isEntry) {
+      button.append(dnaTemplate.content.cloneNode(true));
+    } else {
+      const cross = document.createElement('span');
+      cross.className = 'cross';
+      cross.setAttribute('aria-hidden', 'true');
+      button.append(cross);
+    }
+    button.append(hint);
     button.addEventListener('click', action);
     return button;
   }
@@ -51,8 +65,7 @@ async function startCampus() {
   function renderHomeHotspots() {
     hotLayer.replaceChildren();
     for (const [id] of homePositions[plaza]) {
-      const label = id === 'intro' ? `Découvrir les ${Object.keys(Z).length} univers` : Z[id].name;
-      const button = makePlus(label, () => id === 'intro' ? toggleDirectory(true) : goZone(id));
+      const button = makeHotspot(Z[id].name, () => goZone(id), true);
       button.id = `home-${id}`;
       hotLayer.appendChild(button);
     }
@@ -121,6 +134,7 @@ async function startCampus() {
   }
 
   function home() {
+    const previousZone = zone;
     zone = null;
     roomIndex = 0;
     closeInfo(false);
@@ -132,7 +146,8 @@ async function startCampus() {
     scene.setAttribute('aria-label', 'Panorama du campus');
     campusImg.classList.add('on');
     $('home-guide').classList.remove('hidden');
-    for (const id of ['btn-back', 'room-pos', 'hero', 'location-actions']) $(id).hidden = true;
+    for (const id of ['btn-back', 'room-pos']) $(id).hidden = true;
+    zoneUi.hidden = true;
     roomHot.replaceChildren();
     places.replaceChildren();
     scene.style.backgroundImage = 'none';
@@ -141,87 +156,115 @@ async function startCampus() {
     campusImg.src = plazaAsset();
     updatePlazaNav();
     imageDims();
+    if (previousZone) {
+      const marker = $(`home-${previousZone}`);
+      const target = marker && marker.style.display !== 'none' ? marker : directoryButton;
+      target.focus({ preventScroll: true });
+    }
   }
 
   function goZone(id) {
     if (!Z[id]) return;
     zone = id;
-    roomIndex = 0;
     homePlaza = homePositions.findIndex(positions => positions.some(p => p[0] === id));
     if (homePlaza < 0) homePlaza = 0;
-    showRoom();
+    showRoom(0);
   }
 
-  function showRoom() {
-    if (!zone) return;
+  function showRoom(index) {
     const data = Z[zone];
-    const room = data.rooms[roomIndex];
+    const room = data.rooms[index];
+    const overview = index === 0;
+    roomIndex = index;
     for (const id of ['new-poles', 'plaza-nav']) $(id).hidden = true;
     closeInfo(false);
     toggleDirectory(false);
     scene.classList.remove('home', 'next');
     campusImg.classList.remove('on');
     $('home-guide').classList.add('hidden');
-    for (const id of ['btn-back', 'room-pos', 'hero', 'location-actions']) $(id).hidden = false;
+    $('btn-back').hidden = false;
+    $('room-pos').hidden = overview;
+    $('room-pos').textContent = `Salle ${index} / ${data.rooms.length - 1}`;
+    zoneUi.hidden = false;
+    enterMarker.hidden = exploreButton.hidden = !overview || data.rooms.length < 2;
     void scene.offsetWidth;
     scene.style.backgroundImage = `url("${A[room.asset]}")`;
     scene.dataset.zone = zone;
-    scene.dataset.room = String(roomIndex);
+    scene.dataset.room = String(index);
     scene.setAttribute('role', 'group');
-    scene.setAttribute('aria-label', `Vue immersive : ${room.name}`);
+    const title = overview ? data.name : room.name;
+    scene.setAttribute('aria-label', `Vue immersive — ${title}`);
     scene.classList.add('next');
-    $('hero-tag').textContent = `${data.tag} · ${room.name}`;
-    $('hero-title').textContent = room.name;
-    $('hero-subtitle').textContent = room.subtitle;
-    $('room-pos').textContent = zone === 'research' || zone === 'industrial'
-      ? roomIndex === 0 ? `${data.name} · Parvis` : `${data.name} · espace ${roomIndex}/${data.rooms.length - 1}`
-      : `${data.name} · ${roomIndex + 1}/${data.rooms.length}`;
+    $('hero-title').textContent = title;
+    $('hero-subtitle').textContent = overview ? data.subtitle : room.subtitle;
+    $('hero-details').open = true;
 
+    renderDiscoveries(room.points, overview);
+    renderPlaces(data.rooms, overview);
+    $('hero-summary').focus({ preventScroll: true });
+  }
+
+  function renderDiscoveries(points, overview) {
     roomHot.replaceChildren();
-    room.points.forEach((point, index) => {
-      const button = makePlus(point.title, () => openInfo(index, button));
-      if (Number.isFinite(point.x) && Number.isFinite(point.y)) {
-        button.style.left = `${point.x}%`;
-        button.style.top = `${point.y}%`;
-      }
+    // Leave the center clear for entering, and separate legacy points with the same coordinates.
+    const rows = Math.max(1, Math.ceil(points.length / 2) - 1);
+    const anchors = points.map((_, index) => [
+      index % 2 === 0 ? 27 : 73,
+      33 + 34 * Math.floor(index / 2) / rows,
+    ]);
+    const occupied = [];
+    const fits = ([x, y]) => occupied.every(([otherX, otherY]) =>
+      Math.abs(x - otherX) >= 15 || Math.abs(y - otherY) >= 20);
+    points.forEach((point, index) => {
+      const configured = !overview && Number.isFinite(point.x) && Number.isFinite(point.y);
+      const preferred = configured ? [point.x, point.y] : anchors[index];
+      const position = fits(preferred) ? preferred : anchors.find(fits) ?? preferred;
+      const [x, y] = position;
+      occupied.push(position);
+      const button = makeHotspot(point.title, () => openInfo(index, button));
+      button.style.setProperty('--point-x', `${x}%`);
+      button.style.setProperty('--point-y', `${y}%`);
       roomHot.appendChild(button);
     });
+  }
 
+  function renderPlaces(rooms, overview) {
     places.replaceChildren();
-    data.rooms.forEach((place, index) => {
+    places.hidden = overview;
+    if (overview) return;
+
+    rooms.forEach((place, index) => {
+      const current = roomIndex === index;
       const button = document.createElement('button');
       button.className = 'place';
       button.type = 'button';
-      button.setAttribute('aria-current', String(roomIndex === index));
-      button.innerHTML = '<img alt="" loading="lazy"><span></span>';
-      button.querySelector('img').src = A[place.asset];
-      button.querySelector('span').textContent = place.name;
+      button.setAttribute('aria-current', String(current));
+      button.innerHTML = '<span class="place-image"><img alt="" loading="lazy"></span><span class="place-label"></span>';
+      const thumbnail = button.querySelector('.place-image');
+      thumbnail.querySelector('img').src = A[place.asset];
+      button.querySelector('.place-label').textContent = index === 0 ? 'Présentation' : place.name;
+      if (!current) {
+        const badge = document.createElement('span');
+        badge.className = index === 0 ? 'place-badge return-badge' : 'place-badge entry-badge';
+        badge.setAttribute('aria-hidden', 'true');
+        if (index === 0) badge.textContent = '←';
+        else badge.append(dnaTemplate.content.cloneNode(true));
+        thumbnail.append(badge);
+      }
       button.addEventListener('click', () => {
-        if (roomIndex === index) return;
-        roomIndex = index;
-        showRoom();
+        if (!current) showRoom(index);
       });
       places.appendChild(button);
     });
-    if (data.rooms.length > 3) {
+    if (places.scrollWidth > places.clientWidth) {
       const selected = places.children[roomIndex];
-      const goal = selected.offsetLeft - places.offsetLeft - (places.clientWidth - selected.clientWidth) / 2;
-      places.scrollTo({ left: Math.max(0, goal), behavior: 'instant' });
+      places.scrollLeft = selected.offsetLeft - (places.clientWidth - selected.clientWidth) / 2;
     }
-    $('btn-prev').disabled = roomIndex === 0;
-    $('btn-prev').style.opacity = roomIndex === 0 ? '.45' : '1';
-    $('btn-next').textContent = roomIndex === data.rooms.length - 1 ? '← Revoir le parvis'
-      : roomIndex === 0 && zone === 'research' ? 'Entrer dans le grand hall →'
-      : roomIndex === 0 && zone === 'industrial' ? 'Entrer dans l’atelier →' : 'Lieu suivant →';
-    $('btn-next').disabled = false;
   }
 
   function openInfo(index, trigger) {
-    const data = Z[zone];
-    const room = data.rooms[roomIndex];
-    const point = room.points[index];
+    const point = Z[zone].rooms[roomIndex].points[index];
     infoTrigger = trigger;
-    $('info-context').textContent = `${data.name} · ${room.name}`;
     $('info-title').textContent = point.title;
     $('discovery-body').textContent = point.body || [point.issue, point.solution].filter(Boolean).join(' ');
     $('term-name').textContent = point.term || '';
@@ -241,9 +284,8 @@ async function startCampus() {
   }
 
   function navigate(offset) {
-    if (!zone) return;
-    roomIndex = (roomIndex + offset + Z[zone].rooms.length) % Z[zone].rooms.length;
-    showRoom();
+    const count = Z[zone].rooms.length;
+    showRoom((roomIndex + offset + count) % count);
   }
 
   function buildNav() {
@@ -280,7 +322,9 @@ async function startCampus() {
         directory.appendChild(button);
       });
     });
-    directoryButton.textContent = `☷ Explorer les ${Object.keys(Z).length} univers`;
+    const label = `Explorer les ${Object.keys(Z).length} univers`;
+    directoryButton.setAttribute('aria-label', label);
+    directoryButton.title = label;
   }
 
   function toggleDirectory(force) {
@@ -297,8 +341,10 @@ async function startCampus() {
   $('plaza-right').addEventListener('click', () => setPlaza(plaza + 1));
   $('btn-back').addEventListener('click', home);
   $('close-info').addEventListener('click', () => closeInfo());
-  $('btn-prev').addEventListener('click', () => navigate(-1));
-  $('btn-next').addEventListener('click', () => navigate(1));
+  enterMarker.append(dnaTemplate.content.cloneNode(true));
+  const enterPavilion = () => showRoom(1);
+  enterMarker.addEventListener('click', enterPavilion);
+  exploreButton.addEventListener('click', enterPavilion);
   directoryButton.addEventListener('click', () => toggleDirectory());
   $('full').addEventListener('click', () => {
     if (document.fullscreenElement) {

@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0b0f14">
 <meta name="description" content="Visite libre du Campus Biotechs Occitanie : explorez les espaces du vivant, leurs enjeux et leurs solutions.">
 <title>Campus Biotechs Occitanie</title>
-<link rel="stylesheet" href="./assets/campus.css?v=2">
+<link rel="stylesheet" href="./assets/campus.css?v=3">
 </head>
 <body>
 <div id="loading" role="status">Chargement du campus…</div>
@@ -16,18 +16,20 @@
 <img id="campus-image" draggable="false" alt="Vue panoramique du Campus Biotechs Occitanie">
 <div id="home-hotspots">
 </div>
-<div id="discoveries">
-</div>
 </section>
 <header id="overlay-top">
 <button type="button" class="control" id="btn-back" hidden>← Campus</button>
-<button type="button" class="control" id="btn-directory" aria-controls="directory" aria-expanded="false">☷ Explorer les 13 univers</button>
 <button type="button" class="control" id="new-poles" aria-label="Voir les nouveaux pôles">Parvis 02 / 03</button>
 <span id="top-spacer">
 </span>
 <span id="room-pos" hidden>
 </span>
-<button type="button" class="control" id="full" aria-label="Plein écran" title="Plein écran">⛶</button>
+<button type="button" class="control icon-control" id="btn-directory" aria-label="Explorer les 13 univers" title="Explorer les 13 univers" aria-controls="directory" aria-expanded="false">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<path d="M3 5.5 9 3l6 2.5L21 3v15.5l-6 2.5-6-2.5L3 21zM9 3v15.5M15 5.5V21"/>
+</svg>
+</button>
+<button type="button" class="control icon-control" id="full" aria-label="Plein écran" title="Plein écran">⛶</button>
 </header>
 <nav id="plaza-nav" aria-label="Naviguer entre les trois parvis">
 <button id="plaza-left" class="plaza-arrow" type="button" aria-label="Retour au parvis principal">←</button>
@@ -39,27 +41,26 @@
 </nav>
 <aside id="directory" aria-label="Choisir un lieu">
 <h2>Explorer le campus</h2>
-<p class="dir-lead">Parcourez les bâtiments et les nouveaux pôles en visite libre.</p>
 </aside>
-<section id="hero" hidden aria-live="polite">
-<small id="hero-tag">
-</small>
-<h1 id="hero-title">
-</h1>
-<p id="hero-subtitle">
-</p>
+<div id="zone-ui" hidden>
+<div id="scene-controls">
+<button type="button" class="hot entry-marker" id="btn-enter" aria-label="Entrer dans le pavillon" title="Entrer dans le pavillon" hidden></button>
+<div id="discoveries" role="group" aria-label="Points de découverte"></div>
+</div>
+<div id="zone-details">
+<section id="hero" aria-labelledby="hero-title">
+<details id="hero-details" open>
+<summary id="hero-summary"><h1 id="hero-title" aria-live="polite"></h1></summary>
+<p id="hero-subtitle"></p>
+</details>
+<button type="button" id="explore-pavilion" hidden>Explorer le pavillon</button>
 </section>
-<nav id="location-actions" hidden aria-label="Changer de lieu">
-<button type="button" class="control" id="btn-prev">← Précédent</button>
-<button type="button" class="control" id="btn-next">Lieu suivant →</button>
-</nav>
-<nav id="locations" aria-label="Sous-espaces photoréalistes">
-</nav>
+<nav id="locations" aria-label="Salles du pavillon" hidden></nav>
+</div>
+</div>
 <p id="home-guide">Explorez librement les bâtiments et utilisez les flèches pour changer de parvis</p>
-<aside id="info" aria-label="Découverte" role="dialog" aria-modal="false">
+<aside id="info" aria-labelledby="info-title" role="dialog" aria-modal="false">
 <button id="close-info" type="button" aria-label="Fermer la découverte">×</button>
-<small id="info-context">
-</small>
 <h2 id="info-title">
 </h2>
 <p id="discovery-body">
@@ -74,7 +75,12 @@
 </div>
 </aside>
 </main>
-<script type="module" src="./assets/campus.js?v=2">
+<template id="dna-icon">
+<svg class="dna-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true" focusable="false">
+<path d="M7 3c0 9 10 9 10 18M17 3c0 9-10 9-10 18M7.3 5.8h9.4M9 8.8h6M9 15.2h6M7.3 18.2h9.4"/>
+</svg>
+</template>
+<script type="module" src="./assets/campus.js?v=3">
 </script>
 </body>
 </html>
