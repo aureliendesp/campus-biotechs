@@ -84,7 +84,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #79f3ad;outline-offset:4p
 #hero{
   justify-self:start;
   width:min(100%,420px);
-  padding:14px 17px;
+  padding:20px 24px;
   background:#fff;
   color:#1b1921;
   border-radius:0;
@@ -111,7 +111,13 @@ button:focus-visible,a:focus-visible{outline:3px solid #79f3ad;outline-offset:4p
   transform:rotate(45deg);
 }
 #hero-details[open] #hero-summary::after{transform:rotate(225deg)}
-#hero h1{margin:0;font-size:1.375rem;font-weight:650;line-height:1.2}
+#hero h1{
+  margin:0;
+  color:var(--entry-violet);
+  font-size:1.5625rem;
+  font-weight:650;
+  line-height:1.2;
+}
 #hero p{margin:6px 0 0;font-size:.875rem;line-height:1.45;color:#4a4450}
 #hero :focus-visible{outline:2px solid var(--entry-violet);outline-offset:3px}
 #explore-pavilion{
@@ -183,7 +189,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #79f3ad;outline-offset:4p
   font-weight:600;
   line-height:1.25;
 }
-.place-badge{
+.place-return{
   position:absolute;
   top:50%;
   left:50%;
@@ -194,11 +200,9 @@ button:focus-visible,a:focus-visible{outline:3px solid #79f3ad;outline-offset:4p
   height:29px;
   border:1px solid rgba(255,255,255,.8);
   border-radius:50%;
+  background:rgba(8,14,20,.9);
   color:#fff;
 }
-.entry-badge{background:var(--entry-violet)}
-.return-badge{background:rgba(8,14,20,.9)}
-.place-badge .dna-icon{width:16px;height:16px}
 
 #info{position:absolute;z-index:21;right:22px;top:98px;width:min(390px,calc(100% - 40px));max-height:calc(100dvh - 122px);overflow:auto;padding:24px 24px 22px;background:rgba(11,19,27,.93);border:1px solid rgba(255,255,255,.17);border-radius:22px;box-shadow:0 28px 80px rgba(0,0,0,.38);backdrop-filter:blur(24px);display:none}
 #info.show{display:block;animation:panelin .22s ease}
@@ -224,10 +228,12 @@ button:focus-visible,a:focus-visible{outline:3px solid #79f3ad;outline-offset:4p
 .control{padding:10px 12px;font-size:11px}
 .icon-control{padding:0}
 #room-pos{display:none}
-#zone-ui{inset:61px 12px 13px}
-#hero{padding:13px 14px}
-#hero h1{font-size:1.125rem}
+#zone-ui{inset:61px 0 13px}
+#scene-controls{margin-inline:12px}
+#hero{width:100%;padding:19px 22px}
+#hero h1{font-size:clamp(1.375rem,5.8vw,1.5625rem)}
 #hero p{font-size:.8125rem}
+#locations{margin-inline:8px}
 .place{flex-basis:128px}
 .place img{height:49px}
 #info{left:10px;right:10px;top:auto;bottom:12px;width:auto;max-height:min(73dvh,620px);border-radius:19px;padding:20px}
@@ -235,7 +241,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #79f3ad;outline-offset:4p
 }
 @media(max-height:520px){
 #zone-ui{bottom:9px}
-#hero{padding:10px 13px}
+#hero{padding-block:16px}
 #explore-pavilion{min-height:36px;margin-top:8px}
 .place img{height:38px}
 }

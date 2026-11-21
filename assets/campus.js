@@ -243,12 +243,11 @@ async function startCampus() {
       const thumbnail = button.querySelector('.place-image');
       thumbnail.querySelector('img').src = A[place.asset];
       button.querySelector('.place-label').textContent = index === 0 ? 'Présentation' : place.name;
-      if (!current) {
+      if (index === 0) {
         const badge = document.createElement('span');
-        badge.className = index === 0 ? 'place-badge return-badge' : 'place-badge entry-badge';
+        badge.className = 'place-return';
         badge.setAttribute('aria-hidden', 'true');
-        if (index === 0) badge.textContent = '←';
-        else badge.append(dnaTemplate.content.cloneNode(true));
+        badge.textContent = '←';
         thumbnail.append(badge);
       }
       button.addEventListener('click', () => {
