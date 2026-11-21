@@ -32,7 +32,7 @@ for (const [id, path] of Object.entries(assets)) {
   assert.ok(exactNames.includes(path.slice('images/'.length)), `Casse incorrecte : ${path}`);
 }
 const html = await readFile(new URL('index.html', root), 'utf8');
-for (const match of html.matchAll(/(?:src|href)="(\.\/[^"?#]+)"/gu)) {
+for (const match of html.matchAll(/(?:src|href)="(\.\/[^"?#]+)(?:[?#][^"]*)?"/gu)) {
   assert.ok((await stat(new URL(match[1], root))).isFile(), `Fichier absent : ${match[1]}`);
 }
 console.log(`${Object.keys(zones).length} univers · ${rooms} lieux · ${discoveries} fiches · ${Object.keys(assets).length} références d’images : OK`);
