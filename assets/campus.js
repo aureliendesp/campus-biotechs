@@ -29,12 +29,6 @@ async function startCampus() {
       ['marine', 76, 48], ['space', 91, 52]],
     [['bioeconomy', 31, 43], ['europe', 73, 43]],
   ];
-  const shortNames = {
-    food: 'Alimentation', analyses: 'Bioanalyses', forensic: 'Forensiques',
-    marine: 'Marine', space: 'Spatial', industrial: 'Industrie',
-    environment: 'Eau', plant: 'Végétal', health: 'Santé', research: 'Recherche',
-    orientation: 'Métiers', bioeconomy: 'Bioéconomie', europe: 'Europe biotech',
-  };
   let plaza = 0;
   let homePlaza = 0;
   let zone = null;
@@ -56,20 +50,11 @@ async function startCampus() {
 
   function renderHomeHotspots() {
     hotLayer.replaceChildren();
-    const mobile = $('mobile-worlds');
-    mobile.replaceChildren();
     for (const [id] of homePositions[plaza]) {
       const label = id === 'intro' ? `Découvrir les ${Object.keys(Z).length} univers` : Z[id].name;
       const button = makePlus(label, () => id === 'intro' ? toggleDirectory(true) : goZone(id));
       button.id = `home-${id}`;
       hotLayer.appendChild(button);
-      if (id === 'intro') continue;
-      const quick = document.createElement('button');
-      quick.type = 'button';
-      quick.textContent = shortNames[id] || label;
-      quick.setAttribute('aria-label', `Visiter ${label}`);
-      quick.addEventListener('click', () => goZone(id));
-      mobile.appendChild(quick);
     }
   }
 
@@ -98,7 +83,6 @@ async function startCampus() {
   function updatePlazaNav() {
     const onHome = !zone;
     $('plaza-nav').hidden = !onHome;
-    $('mobile-worlds').hidden = !onHome;
     if (!onHome) return;
     const names = ['Parvis principal', 'Parvis des nouveaux pôles', 'Parvis Bioéconomie & Europe'];
     const guides = [
@@ -172,7 +156,7 @@ async function startCampus() {
     if (!zone) return;
     const data = Z[zone];
     const room = data.rooms[roomIndex];
-    for (const id of ['new-poles', 'plaza-nav', 'mobile-worlds']) $(id).hidden = true;
+    for (const id of ['new-poles', 'plaza-nav']) $(id).hidden = true;
     closeInfo(false);
     toggleDirectory(false);
     scene.classList.remove('home', 'next');
