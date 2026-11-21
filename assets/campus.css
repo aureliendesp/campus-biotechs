@@ -13,6 +13,30 @@ button{font:inherit}
 button:focus-visible,a:focus-visible{outline:3px solid #79f3ad;outline-offset:4px}
 #app{position:relative;width:100%;height:100dvh;overflow:hidden;isolation:isolate;background:#050b12}
 #scene{position:absolute;inset:0;background-color:#131b23;background-size:cover;background-position:center}
+#scene[data-zone="orientation"][data-room="1"]{
+  --orientation-hall-position:28%;
+  background-position:var(--orientation-hall-position) center;
+}
+/* Aligner le lien sur la photo du hall, y compris lorsqu’elle est recadrée. */
+#orientation-screen{
+  display:none;
+  position:absolute;
+  top:50%;
+  left:var(--orientation-hall-position);
+  width:max(100%,calc(100dvh * 16 / 9));
+  height:auto;
+  transform-box:border-box;
+  transform:translate(calc(0% - var(--orientation-hall-position)),-50%);
+  pointer-events:none;
+}
+#scene[data-zone="orientation"][data-room="1"] #orientation-screen{display:block}
+#destination-screen polygon{pointer-events:all;cursor:pointer}
+#destination-screen:is(:hover,:focus-visible) polygon{
+  fill:rgba(255,255,255,.13);
+  stroke:#fff;
+  stroke-width:2px;
+  vector-effect:non-scaling-stroke;
+}
 #scene::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(3,8,15,.54),transparent 27%);pointer-events:none}
 #scene.next{animation:enter .92s cubic-bezier(.21,.55,.31,1)}
 @keyframes enter{0%{opacity:.1;filter:blur(10px);transform:scale(1.08)}

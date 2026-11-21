@@ -511,6 +511,8 @@
         "points": [
           {
             "title": "Trois BTS pour explorer des activités complémentaires",
+            "x": 92,
+            "y": 27,
             "term": "BTS",
             "definition": "Diplôme national de l’enseignement supérieur préparé en deux ans après le baccalauréat.",
             "body": "Le BTS biotechnologie en recherche et en production prépare à des techniques du vivant mobilisées en recherche et en production. Le BTS bioanalyses en laboratoire de contrôle se concentre sur les méthodes d’analyse et le fonctionnement du laboratoire. Le BTS bioqualité porte sur la qualité dans les bio-industries. Ces BTS se préparent en deux ans ; l’admission dépend du dossier et de la formation.",
@@ -518,6 +520,8 @@
           },
           {
             "title": "Plusieurs niveaux d’études",
+            "x": 92,
+            "y": 53,
             "issue": "Tous les postes ne demandent pas la même formation.",
             "solution": "BTS, BUT, licences, écoles d’ingénieurs et universités ouvrent des rôles complémentaires.",
             "term": "BTS / BUT",
@@ -525,6 +529,8 @@
           },
           {
             "title": "Des lieux en Occitanie",
+            "x": 92,
+            "y": 78,
             "issue": "La région dispose de laboratoires, d’entreprises et d’établissements de formation.",
             "solution": "Le campus peut les relier au fil de la visite grâce aux portraits et aux cartes de formations.",
             "term": "Alternance",

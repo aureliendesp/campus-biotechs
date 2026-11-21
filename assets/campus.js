@@ -1,7 +1,9 @@
 // Campus Biotechs Occitanie — navigation issue de la V27.
 // Les textes et la correspondance des images se modifient dans leurs JSON.
 async function loadJSON(path) {
-  const response = await fetch(new URL(path, document.baseURI));
+  const url = new URL(path, document.baseURI);
+  url.search = new URL(import.meta.url).search;
+  const response = await fetch(url);
   if (!response.ok) throw new Error(`Chargement impossible : ${path} (${response.status})`);
   return response.json();
 }
