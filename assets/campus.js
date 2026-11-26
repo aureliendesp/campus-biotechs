@@ -173,6 +173,9 @@ async function startCampus() {
     const data = Z[zone];
     const room = data.rooms[index];
     const overview = index === 0;
+    const entryIndex = overview ? 1 : data.rooms.findIndex(place => place.asset === room.entry?.asset);
+    const canEnter = Boolean(data.rooms[entryIndex]);
+    const entryLabel = room.entry?.label ?? 'Entrer dans le pavillon';
     roomIndex = index;
     for (const id of ['new-poles', 'plaza-nav']) $(id).hidden = true;
     closeInfo(false);
@@ -184,7 +187,11 @@ async function startCampus() {
     $('room-pos').hidden = overview;
     $('room-pos').textContent = `Salle ${index} / ${data.rooms.length - 1}`;
     zoneUi.hidden = false;
-    enterMarker.hidden = exploreButton.hidden = !overview || data.rooms.length < 2;
+    enterMarker.hidden = !canEnter;
+    enterMarker.setAttribute('aria-label', entryLabel);
+    enterMarker.title = entryLabel;
+    enterMarker.onclick = canEnter ? () => showRoom(entryIndex) : null;
+    exploreButton.hidden = !overview || !canEnter;
     void scene.offsetWidth;
     const imageUrl = new URL(A[room.asset], document.baseURI);
     scene.style.setProperty('--room-image', `url("${imageUrl}")`);
@@ -340,9 +347,7 @@ async function startCampus() {
   $('plaza-right').addEventListener('click', () => setPlaza(plaza + 1));
   $('btn-back').addEventListener('click', home);
   $('close-info').addEventListener('click', () => closeInfo());
-  const enterPavilion = () => showRoom(1);
-  enterMarker.addEventListener('click', enterPavilion);
-  exploreButton.addEventListener('click', enterPavilion);
+  exploreButton.addEventListener('click', () => showRoom(1));
   const kioskIndex = Z.orientation.rooms.findIndex(room => room.asset === 'orientation_kiosk');
   const kioskButton = $('enter-kiosk');
   kioskButton.hidden = kioskIndex < 0;

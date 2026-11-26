@@ -156,8 +156,18 @@
         ]
       },
       {
-        "name": "La serre expérimentale",
+        "name": "Hall d’accueil",
         "asset": "plant_explore",
+        "subtitle": "Accède à la serre expérimentale du pavillon.",
+        "entry": {
+          "asset": "plant_greenhouse",
+          "label": "Entrer dans la serre expérimentale"
+        },
+        "points": []
+      },
+      {
+        "name": "La serre expérimentale",
+        "asset": "plant_greenhouse",
         "subtitle": "Observer les interactions plante-microorganismes et tester des solutions de protection des cultures.",
         "points": [
           {

@@ -14,6 +14,10 @@ for (const [id, zone] of Object.entries(zones)) {
     rooms++;
     assert.ok(room.name && room.subtitle && assets[room.asset], `Lieu incomplet : ${id} / ${room.name}`);
     assert.ok(Array.isArray(room.points), `Fiches manquantes : ${room.name}`);
+    if (room.entry) {
+      assert.ok(room.entry.label?.trim(), `Libellé d’entrée manquant : ${room.name}`);
+      assert.ok(zone.rooms.some(target => target !== room && target.asset === room.entry.asset), `Destination introuvable : ${room.name}`);
+    }
     for (const point of room.points) {
       discoveries++;
       assert.ok(point.title && (point.body || point.issue || point.solution), `Fiche vide : ${room.name}`);

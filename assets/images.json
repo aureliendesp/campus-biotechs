@@ -1,9 +1,10 @@
 {
   "analyses_hall": "images/analyses_hall.webp",
-  "plant_exterior": "images/plant_exterior.webp",
+  "plant_exterior": "images/plant_exterior_parvis.webp",
   "marine_exterior": "images/marine_exterior.webp",
   "environment_hall": "images/environment_hall.webp",
   "plant_explore": "images/plant_explore.png",
+  "plant_greenhouse": "images/plant_greenhouse.webp",
   "health_hall": "images/health_hall.webp",
   "research_hall": "images/research_hall.png",
   "analyses_medical": "images/analyses_medical.webp",

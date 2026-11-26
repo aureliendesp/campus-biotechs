@@ -104,6 +104,9 @@ button:focus-visible,a:focus-visible{outline:3px solid #79f3ad;outline-offset:4p
 }
 #btn-enter .cross:before{width:18px}
 #btn-enter .cross:after{height:18px}
+#scene[data-asset="plant_explore"] ~ #zone-ui #btn-enter{
+  top:min(88%,calc(100% - 26px));
+}
 
 #overlay-top{position:absolute;left:22px;right:22px;top:18px;z-index:11;display:flex;gap:12px;align-items:center;pointer-events:none}
 #overlay-top>*{pointer-events:auto}
