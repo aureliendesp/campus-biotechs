@@ -21,7 +21,6 @@ async function startCampus() {
   const zoneUi = $('zone-ui');
   const enterMarker = $('btn-enter');
   const exploreButton = $('explore-pavilion');
-  const dnaTemplate = $('dna-icon');
   const roomHot = $('discoveries');
   const directory = $('directory');
   const directoryButton = $('btn-directory');
@@ -51,15 +50,11 @@ async function startCampus() {
     hint.className = 'hint';
     hint.setAttribute('aria-hidden', 'true');
     hint.textContent = label;
-    if (isEntry) {
-      button.append(dnaTemplate.content.cloneNode(true));
-    } else {
-      const cross = document.createElement('span');
-      cross.className = 'cross';
-      cross.setAttribute('aria-hidden', 'true');
-      button.append(cross);
-    }
-    button.append(hint);
+    const icon = document.createElement('span');
+    icon.className = isEntry ? 'cross' : 'info-icon';
+    icon.setAttribute('aria-hidden', 'true');
+    if (!isEntry) icon.textContent = 'i';
+    button.append(icon, hint);
     button.addEventListener('click', action);
     return button;
   }
@@ -144,6 +139,7 @@ async function startCampus() {
     scene.classList.add('home');
     scene.removeAttribute('data-zone');
     scene.removeAttribute('data-room');
+    scene.removeAttribute('data-asset');
     scene.removeAttribute('role');
     scene.setAttribute('aria-label', 'Panorama du campus');
     campusImg.classList.add('on');
@@ -152,7 +148,7 @@ async function startCampus() {
     zoneUi.hidden = true;
     roomHot.replaceChildren();
     places.replaceChildren();
-    scene.style.backgroundImage = 'none';
+    scene.style.removeProperty('--room-image');
     plaza = homePlaza;
     renderHomeHotspots();
     campusImg.src = plazaAsset();
@@ -190,9 +186,11 @@ async function startCampus() {
     zoneUi.hidden = false;
     enterMarker.hidden = exploreButton.hidden = !overview || data.rooms.length < 2;
     void scene.offsetWidth;
-    scene.style.backgroundImage = `url("${A[room.asset]}")`;
+    const imageUrl = new URL(A[room.asset], document.baseURI);
+    scene.style.setProperty('--room-image', `url("${imageUrl}")`);
     scene.dataset.zone = zone;
     scene.dataset.room = String(index);
+    scene.dataset.asset = room.asset;
     scene.setAttribute('role', 'group');
     const title = overview ? data.name : room.name;
     scene.setAttribute('aria-label', `Vue immersive — ${title}`);
@@ -342,10 +340,13 @@ async function startCampus() {
   $('plaza-right').addEventListener('click', () => setPlaza(plaza + 1));
   $('btn-back').addEventListener('click', home);
   $('close-info').addEventListener('click', () => closeInfo());
-  enterMarker.append(dnaTemplate.content.cloneNode(true));
   const enterPavilion = () => showRoom(1);
   enterMarker.addEventListener('click', enterPavilion);
   exploreButton.addEventListener('click', enterPavilion);
+  const kioskIndex = Z.orientation.rooms.findIndex(room => room.asset === 'orientation_kiosk');
+  const kioskButton = $('enter-kiosk');
+  kioskButton.hidden = kioskIndex < 0;
+  kioskButton.addEventListener('click', () => showRoom(kioskIndex));
   directoryButton.addEventListener('click', () => toggleDirectory());
   $('full').addEventListener('click', () => {
     if (document.fullscreenElement) {

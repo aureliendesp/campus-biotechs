@@ -12,30 +12,66 @@ html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0f14;col
 button{font:inherit}
 button:focus-visible,a:focus-visible{outline:3px solid #79f3ad;outline-offset:4px}
 #app{position:relative;width:100%;height:100dvh;overflow:hidden;isolation:isolate;background:#050b12}
-#scene{position:absolute;inset:0;background-color:#131b23;background-size:cover;background-position:center}
-#scene[data-zone="orientation"][data-room="1"]{
-  --orientation-hall-position:28%;
-  background-position:var(--orientation-hall-position) center;
-}
-/* Aligner le lien sur la photo du hall, y compris lorsqu’elle est recadrée. */
-#orientation-screen{
+#scene{position:absolute;inset:0;background:#131b23 var(--room-image,none) center / cover no-repeat}
+#orientation-view{
+  --photo-cover-width:max(100%,calc(100dvh * 1671 / 941));
   display:none;
   position:absolute;
-  top:50%;
-  left:var(--orientation-hall-position);
-  width:max(100%,calc(100dvh * 16 / 9));
-  height:auto;
-  transform-box:border-box;
-  transform:translate(calc(0% - var(--orientation-hall-position)),-50%);
+  inset:0;
+  overflow:clip;
   pointer-events:none;
 }
-#scene[data-zone="orientation"][data-room="1"] #orientation-screen{display:block}
+#scene[data-asset="orientation_hall"] #orientation-view{display:block}
+/* La photo, l’écran et le kiosque utilisent le même cadrage. */
+#orientation-panorama{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:var(--photo-cover-width);
+  aspect-ratio:1671 / 941;
+  transform:translate(-50%,-50%);
+}
+#orientation-screen{position:absolute;inset:0;width:100%;height:100%}
 #destination-screen polygon{pointer-events:all;cursor:pointer}
 #destination-screen:is(:hover,:focus-visible) polygon{
   fill:rgba(255,255,255,.13);
   stroke:#fff;
   stroke-width:2px;
   vector-effect:non-scaling-stroke;
+}
+#enter-kiosk{
+  position:absolute;
+  left:58%;
+  top:50.6%;
+  width:27%;
+  height:10.8%;
+  border:0;
+  padding:0;
+  background:transparent;
+  cursor:pointer;
+  pointer-events:auto;
+}
+#enter-kiosk .hot{left:45%;top:50%;pointer-events:none}
+#enter-kiosk:is(:hover,:focus-visible) .hot{background:#000}
+@media(max-aspect-ratio:4/5){
+  #orientation-view{
+    -webkit-backdrop-filter:blur(16px) brightness(.7);
+    backdrop-filter:blur(16px) brightness(.7);
+  }
+  #orientation-panorama{top:39%;width:min(var(--photo-cover-width),202%)}
+  #orientation-panorama::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:var(--room-image) center / 100% 100% no-repeat;
+    mask-image:linear-gradient(to bottom,transparent,#000 8%,#000 88%,transparent);
+  }
+  #scene[data-asset="orientation_kiosk"] #orientation-view{display:block}
+  #scene[data-asset="orientation_kiosk"] #orientation-panorama{
+    top:38%;
+    width:min(var(--photo-cover-width),142%);
+  }
+  #scene[data-asset="orientation_kiosk"] :is(#orientation-screen,#enter-kiosk){display:none}
 }
 #scene::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(3,8,15,.54),transparent 27%);pointer-events:none}
 #scene.next{animation:enter .92s cubic-bezier(.21,.55,.31,1)}
@@ -54,24 +90,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #79f3ad;outline-offset:4p
 .hot .cross:before,.hot .cross:after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:white;border-radius:2px}
 .hot .cross:before{width:14px;height:2px}
 .hot .cross:after{width:2px;height:14px}
+.hot .info-icon{font:700 20px/1 Georgia,serif}
 .hot .hint{position:absolute;bottom:calc(100% + 13px);left:50%;transform:translateX(-50%);background:rgba(7,13,20,.91);border:1px solid rgba(255,255,255,.16);padding:8px 11px;border-radius:10px;width:max-content;max-width:min(235px,calc(100vw - 32px));font-size:12px;font-weight:650;opacity:0;pointer-events:none;transition:opacity .15s}
 .hot:focus-visible .hint{opacity:1}
 @media(hover:hover){.hot:hover .hint{opacity:1}}
 
-.entry-marker{
-  width:42px;
-  height:42px;
-  background:var(--entry-violet);
-}
-.entry-marker:hover{background:var(--entry-hover)}
-.dna-icon{display:block;width:20px;height:20px}
+.entry-marker{width:42px;height:42px}
 #btn-enter{
   left:50%;
   top:50%;
   width:52px;
   height:52px;
 }
-#btn-enter .dna-icon{width:25px;height:25px}
+#btn-enter .cross:before{width:18px}
+#btn-enter .cross:after{height:18px}
 
 #overlay-top{position:absolute;left:22px;right:22px;top:18px;z-index:11;display:flex;gap:12px;align-items:center;pointer-events:none}
 #overlay-top>*{pointer-events:auto}
@@ -102,6 +134,11 @@ button:focus-visible,a:focus-visible{outline:3px solid #79f3ad;outline-offset:4p
 #discoveries .hot{
   left:clamp(20px,var(--point-x),calc(100% - 20px));
   top:clamp(20px,var(--point-y),calc(100% - 20px));
+}
+#scene[data-asset="orientation_hall"] ~ #zone-ui #discoveries .hint{
+  left:auto;
+  right:-6px;
+  transform:none;
 }
 
 #zone-details{display:grid;gap:8px;min-width:0}

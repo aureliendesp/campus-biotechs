@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0b0f14">
 <meta name="description" content="Visite libre du Campus Biotechs Occitanie : explorez les espaces du vivant, leurs enjeux et leurs solutions.">
 <title>Campus Biotechs Occitanie</title>
-<link rel="stylesheet" href="./assets/campus.css?v=5">
+<link rel="stylesheet" href="./assets/campus.css?v=6">
 </head>
 <body>
 <div id="loading" role="status">Chargement du campus…</div>
@@ -16,16 +16,23 @@
 <img id="campus-image" draggable="false" alt="Vue panoramique du Campus Biotechs Occitanie">
 <div id="home-hotspots">
 </div>
-<svg id="orientation-screen" viewBox="0 0 1536 864">
+<div id="orientation-view">
+<div id="orientation-panorama">
+<svg id="orientation-screen" viewBox="0 0 1671 941">
 <a id="destination-screen" href="https://destination-biotechs.r7csg86d7h.workers.dev" target="_blank" rel="noopener noreferrer" tabindex="0" aria-label="Ouvrir Destination Biotechs dans un nouvel onglet">
 <title>Ouvrir Destination Biotechs</title>
-<polygon points="294,89 641,204 641,465 294,488" fill="transparent"/>
-<g transform="translate(607 387)" aria-hidden="true">
-<circle r="20" fill="#100c18" fill-opacity=".85" stroke="#fff" stroke-opacity=".8" stroke-width="1.5"/>
-<path d="M-7 7 7-7M-7-7H7V7" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="297,91 647,211 647,478 297,486" fill="transparent"/>
+<g transform="translate(595 364)" aria-hidden="true">
+<circle r="25" fill="#100c18" fill-opacity=".85" stroke="#fff" stroke-opacity=".8" stroke-width="1.5"/>
+<path d="M-8 8 8-8M-8-8H8V8" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </a>
 </svg>
+<button type="button" id="enter-kiosk" aria-label="Entrer au kiosque orientation Région" title="Entrer au kiosque orientation Région" hidden>
+<span class="hot entry-marker" aria-hidden="true"><span class="cross"></span></span>
+</button>
+</div>
+</div>
 </section>
 <header id="overlay-top">
 <button type="button" class="control" id="btn-back" hidden>← Campus</button>
@@ -54,7 +61,7 @@
 </aside>
 <div id="zone-ui" hidden>
 <div id="scene-controls">
-<button type="button" class="hot entry-marker" id="btn-enter" aria-label="Entrer dans le pavillon" title="Entrer dans le pavillon" hidden></button>
+<button type="button" class="hot entry-marker" id="btn-enter" aria-label="Entrer dans le pavillon" title="Entrer dans le pavillon" hidden><span class="cross" aria-hidden="true"></span></button>
 <div id="discoveries" role="group" aria-label="Points de découverte"></div>
 </div>
 <div id="zone-details">
@@ -85,12 +92,7 @@
 </div>
 </aside>
 </main>
-<template id="dna-icon">
-<svg class="dna-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true" focusable="false">
-<path d="M7 3c0 9 10 9 10 18M17 3c0 9-10 9-10 18M7.3 5.8h9.4M9 8.8h6M9 15.2h6M7.3 18.2h9.4"/>
-</svg>
-</template>
-<script type="module" src="./assets/campus.js?v=5">
+<script type="module" src="./assets/campus.js?v=6">
 </script>
 </body>
 </html>
