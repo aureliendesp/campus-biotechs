@@ -20,7 +20,8 @@ async function startCampus() {
   const hotLayer = $('home-hotspots');
   const zoneUi = $('zone-ui');
   const enterMarker = $('btn-enter');
-  const exploreButton = $('explore-pavilion');
+  const heroTitle = $('hero-title');
+  const heroCategory = $('hero-category');
   const roomHot = $('discoveries');
   const directory = $('directory');
   const directoryButton = $('btn-directory');
@@ -191,7 +192,6 @@ async function startCampus() {
     enterMarker.setAttribute('aria-label', entryLabel);
     enterMarker.title = entryLabel;
     enterMarker.onclick = canEnter ? () => showRoom(entryIndex) : null;
-    exploreButton.hidden = !overview || !canEnter;
     void scene.offsetWidth;
     const imageUrl = new URL(A[room.asset], document.baseURI);
     scene.style.setProperty('--room-image', `url("${imageUrl}")`);
@@ -200,15 +200,17 @@ async function startCampus() {
     scene.dataset.asset = room.asset;
     scene.setAttribute('role', 'group');
     const title = overview ? data.name : room.name;
+    const category = overview ? data.tag : data.name;
     scene.setAttribute('aria-label', `Vue immersive — ${title}`);
     scene.classList.add('next');
-    $('hero-title').textContent = title;
+    heroCategory.textContent = category;
+    heroCategory.hidden = category.toLocaleUpperCase('fr') === title.toLocaleUpperCase('fr');
+    heroTitle.textContent = title;
     $('hero-subtitle').textContent = overview ? data.subtitle : room.subtitle;
-    $('hero-details').open = true;
 
     renderDiscoveries(room.points, overview);
     renderPlaces(data.rooms, overview);
-    $('hero-summary').focus({ preventScroll: true });
+    heroTitle.focus({ preventScroll: true });
   }
 
   function renderDiscoveries(points, overview) {
@@ -347,7 +349,6 @@ async function startCampus() {
   $('plaza-right').addEventListener('click', () => setPlaza(plaza + 1));
   $('btn-back').addEventListener('click', home);
   $('close-info').addEventListener('click', () => closeInfo());
-  exploreButton.addEventListener('click', () => showRoom(1));
   const kioskIndex = Z.orientation.rooms.findIndex(room => room.asset === 'orientation_kiosk');
   const kioskButton = $('enter-kiosk');
   kioskButton.hidden = kioskIndex < 0;
